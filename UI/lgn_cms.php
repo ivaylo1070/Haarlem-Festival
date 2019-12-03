@@ -1,9 +1,13 @@
-
+<?php
+include('Model/dhs_login.php'); // Includes Login Script
+if(isset($_SESSION['login_user'])){
+header("location: profile.php"); // Redirecting To Profile Page
+}
 <!DOCTYPE html>
 <html>
   <head>
     <meta name="description" content="This is the volunteer login page for the content management system.">
-    <meta name="keywords" content="cms, content, haarlem festival">
+    <meta name="keywords" content="cms, content, haarlem, festival, event">
     <link href="style/cms_login.css" rel="stylesheet" type="text/css">
     <title>Haarlem festival</title>
 
@@ -18,9 +22,10 @@
       </a>
       <ul>
         <li><a href="index.php">Home</a></li>
-        <li><a href="haarlem_foog.php">Haarlem Food</a></li>
+        <li><a href="haarlem_food.php">Haarlem Food</a></li>
         <li><a href="haarlem_dance.php">Haarlem Dance</a></li>
         <li><a href="haarlem_jazz.php">Haarlem Jazz</a></li>
+      </ul>
     </nav>
   </header>
 <body>
@@ -34,6 +39,5 @@
       <input name="submit" type="submit" value=" Login ">
       <span><?php echo $error; ?></span>
     </form>
-</article>
-</body>
+  </article>
 </html>
