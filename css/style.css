@@ -14,6 +14,9 @@ p.introduction,h3{
  h3{
 color:#cc6011;
 }
+
+/******* header **************/
+
 .header {
   padding: 80px;
   background-image: url("../Img/hi.jpg");
@@ -34,8 +37,16 @@ ul {
   background-color: #cc6011;
 }
 
+img{
+width:50%;
+
+}
+
 li {
-  float: right;
+	display: inline-block;
+	width:14em;
+	height:5em;
+	float: right;
 }
 
 li a {
@@ -51,7 +62,15 @@ li a:hover {
   background-color: #fff;
   color: #cc6011;
 }
-/******* the home page **************/
+
+/* need to fix !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.cartIcon {
+  background-image: url("../Img/logo.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+/******* the home page **************//*
 .flex-container-HaarlemIndex .article1
 {
 	 min-width:23% ;
