@@ -8,9 +8,9 @@ private $dbhname;
 
 public function Connect(){
 		$this->servername = "localhost";
-		$this->username = "root";
-		$this->password = "";
-		$this->dbhname = "haarlem_f";
+		$this->username = "hfitteam4_user";
+		$this->password = "b6YMJTmc";
+		$this->dbhname = "hfitteam4_db";
 
 		$conn = new mysqli($this->servername,$this->username,$this->password,$this->dbhname);
 

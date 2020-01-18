@@ -1,12 +1,21 @@
 <?php
+require_once("Ticket.php");
 
-class Dance{
+class Dance extends Ticket{
 
-    
+  public $end;
+  public $seats;
+  public $venue;
+  public $address;
 
-    function _construct(){
+
+/*
+    public function _construct(){
 
     }
+*/
+
+
 }
 
 ?>

@@ -7,17 +7,24 @@
 		 dance,jazz  
 		 amusement, cheer,products" /> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="style.css">
 </head>
+<body>
+<form name="ticket">
 
-<tr class="ticket">
-	<td>title</td>
-	<td><img src="Img/Fris.png" alt="product 1"  title ="image of rubiks  cub"/></td>
-    <td><img src="Img/Fris.png" alt="product 1"  title ="image of rubiks  cub"/></td>
-	<td><p class="time">time</p></td>
-	<td><p class="venue">venue</p></td>
-	<td><p class="address">address</p></td>
-	<td><p class="price">price</p></td>
-	<td><p class="price">quantity</p></td>
+	<input type="hidden" name="name[]">
 
-</article>
+	<label id="title">title</label>
+	<label id="price">price</label></br>
+
+	<img src="../Img/ticket_time.png" id="imgtime"/>
+	<label><p id="time">time</p></label>
+	<label id="quantity">ammount <button type="button"> - </button><input type="number" name="quantity"><button type="button"> + </button> seats</label>
+
+    <img src="../Img/ticket_pin.png" id="imgloc"/>
+	<label><p>venue</p></label>
+	<button type="button" id="addtocart"> add to cart </button>
+	
+</form>
+
+</body>

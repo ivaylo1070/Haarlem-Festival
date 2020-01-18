@@ -19,7 +19,7 @@ $date='2020-07-28';
 $eventId= 4;
 $model = new model();
 $controller = new controller($model);
-$tickets= $controller->Get_Tickets($date,$eventId); //tickets array
+$tickets = $controller->Get_Tickets($date,$eventId); //tickets array
 
 
 // id add button is set get ticketI
