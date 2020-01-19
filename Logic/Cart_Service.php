@@ -16,13 +16,19 @@ class Cart_Service{
 
   //for updated information
   public function ReadCart(){
-    $basicCart = unserialize($_COOKIE['cart']);
-    $tickets = [];
-    foreach ($basicCart as $id => $quantity){
-      $ticket = getTicketByID($id);
-      $tickets[$ticket->ticketID] = $ticket;
+    if (isset($_COOKIE["cart"])){
+      $basicCart = unserialize($_COOKIE['cart']);
+      $tickets = [];
+      foreach ($basicCart as $id => $quantity){
+        $ticket = getTicketByID($id);
+        $tickets[$ticket->ticketID] = $ticket;
+      }
+      $_SESSION["cart"]=$tickets;
     }
-    $_SESSION["cart"]=$tickets;
+    else {
+      $cart = [];
+      saveCart($cart);
+    }
   }
 
   public function ClearCart(){

@@ -5,7 +5,7 @@
 
 }
 body{
-	margin : 15px;
+		width:100%;
 }
 p.introduction,h3{
 	margin-top:15px;
@@ -35,10 +35,11 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #cc6011;
+  float:right;
 }
 
 img{
-width:50%;
+width:100%;
 
 }
 
@@ -257,12 +258,33 @@ li a:hover {
 	width:2em;
 	float:left;
 }
+/********************Sidebar************************/
+
+
+/* Create two columns/boxes that floats next to each other */
+aside {
+  float: right;
+  width: 20%;
+  height: 100%;
+  background: #ccc;
+  padding: 1em;
+}
+
+
+section {
+	width:100%;
+}
+
+article{
+	min-height:40em;
+}
 
 /********************Footer**************************/
 footer {
-  padding: 20px; 
-  text-align: center; 
-  color:#fff;
-  background:#cc6011;
-  width :100%;
+	float:down;
+	padding: 1em; 
+	text-align: center; 
+	color:#fff;
+	background:#cc6011;
+	width :100%;
 }

@@ -11,5 +11,5 @@
 	<li><a href="<?php echo $link_address;?>index.php">Home</a></li>
 </ul>
 <header class="header">
-
+<!--for background image-->
 </header>
