@@ -11,4 +11,3 @@ abstract class Ticket{
 include_once("Jazz.php");
 include_once("Dance.php");
 include_once("Reservation.php");
-}

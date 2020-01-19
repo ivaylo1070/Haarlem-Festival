@@ -1,8 +1,8 @@
 <?php
-require("../Model/Jazz.php");
+require_once("../Model/Jazz.php");
 require_once("cart_dal.php");
 
-class jazz_dal() extend cart_dal{
+class jazz_dal extends cart_dal{
 
   /* // edit for jazz
   function getTicketByID($id){
@@ -26,5 +26,5 @@ class jazz_dal() extend cart_dal{
       $ticket->address = $data['V.address'];
       return $ticket;
     }
-
+  }*/
 }

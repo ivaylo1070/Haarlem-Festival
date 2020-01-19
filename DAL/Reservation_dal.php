@@ -1,8 +1,8 @@
 <?php
-require("../Model/Reservation.php");
+require_once("../Model/Reservation.php");
 require_once("cart_dal.php");
 
-class Reservation_dal() extend cart_dal{
+class Reservation_dal extends cart_dal{
 
 /* // edit for reservation
   function getTicketByID($id){
@@ -26,5 +26,5 @@ class Reservation_dal() extend cart_dal{
       $ticket->address = $data['V.address'];
       return $ticket;
     }
-
+  }*/
 }

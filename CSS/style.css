@@ -187,7 +187,7 @@ li a:hover {
 }
 
 /**************************Ticket**************************/
-form{
+#ticket{
 	border: 1px solid #bdc3c7;
 
 	width: 70em;
@@ -200,12 +200,12 @@ form{
 }
 
 
-label button{
+#ticket label button{
 	width:2em;
 	font-size: 0.8em;
 
 }
-label input{
+#ticket label input{
 	width:3em;
 	font-size: 0.8em;
 
@@ -243,7 +243,7 @@ label input{
 }
 
 
-label {
+#ticket label {
 	display: inline-block;
 	width:20em;
 	height:1.1em;
@@ -253,7 +253,7 @@ label {
 
 }
 
-img {
+#ticket img {
 	width:2em;
 	float:left;
 }

@@ -2,7 +2,7 @@
 require_once("../Model/Dance.php");
 require_once("cart_dal.php");
 
-class Dance_dal() extend cart_dal{
+class Dance_dal extends cart_dal{
 
 
   function getTicketByID($id){
@@ -26,5 +26,5 @@ class Dance_dal() extend cart_dal{
       $ticket->address = $data['V.address'];
       return $ticket;
     }
-
+  }
 }
