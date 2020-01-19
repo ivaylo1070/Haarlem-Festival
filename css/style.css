@@ -70,7 +70,8 @@ li a:hover {
   background-attachment: fixed;
   background-position: center;
 }
-/******* the home page **************//*
+
+/******* the home page **************/
 .flex-container-HaarlemIndex .article1
 {
 	 min-width:23% ;
@@ -185,6 +186,79 @@ li a:hover {
 	 margin-left:20% ;
 }
 
+/**************************Ticket**************************/
+form{
+	border: 1px solid #bdc3c7;
+
+	width: 70em;
+	height:9em;
+	margin: auto;
+	padding:0 0 0 1em;
+	float:up;
+	
+	background-color:#c7c7c7;
+}
+
+
+label button{
+	width:2em;
+	font-size: 0.8em;
+
+}
+label input{
+	width:3em;
+	font-size: 0.8em;
+
+}
+
+#addtocart{
+	
+	width:10em;
+	font-size: 2em;
+	float:right;
+	padding:none;
+	margin:0.3em;
+	background-color:#cc6011;
+	border:0.03em solid;
+	border-radius: 0.3em;
+}
+
+#price{
+		width:40%;
+		font-size: 3em ;
+		font-weight: bold;
+		float:left;
+
+}
+#title{
+	width:60%;
+	font-size: 3em;
+	font-weight: bold;
+	float:left;
+
+}
+#quantity{
+	width:40%;
+
+}
+
+
+label {
+	display: inline-block;
+	width:20em;
+	height:1.1em;
+	font-size: 2em;
+	float:left;
+	
+
+}
+
+img {
+	width:2em;
+	float:left;
+}
+
+/********************Footer**************************/
 footer {
   padding: 20px; 
   text-align: center; 

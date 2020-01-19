@@ -9,7 +9,8 @@ require 'cart.php';
 <link rel="stylesheet" type="text/css" href="css/mystyle.css"/>
 </head>
 <body>
-<h1>HAARLEM FESTIVAL JAZZ PROGRAM </h1>
+	<?php require("UI/header.php")?>
+<h1>HAARLEM FESTIVAL DANCE PROGRAM </h1>
 	<form>
 			<p>
 			<label for="">Sort by</label>
