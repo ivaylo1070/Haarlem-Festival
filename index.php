@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <link rel="stylesheet" href="css/style.css">
   <?php require("UI/header.php")?>
 </head>
 <body>
