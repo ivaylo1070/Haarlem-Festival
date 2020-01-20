@@ -278,7 +278,33 @@ section {
 article{
 	min-height:40em;
 }
-
+/********************CMS*****************************/
+#login{
+  font-size: 28px;
+  color: #cc6011;
+  width:60%;
+  margin:100px auto;
+  background-color: #ffff
+}
+.login-button{
+  width: 30%;
+  color: #ffff;
+  text-align: center;
+  background:#cc6011;
+}
+.login-button2{
+  width: 30%;
+  color: #0000FF;
+  text-align: center;
+  background:#ffff;
+}
+.cms_button {
+  text-align: center;
+  color:#fff;
+  background:#cc6011;
+  border-style: :none;
+  border-color: #cc6011;
+}
 /********************Footer**************************/
 footer {
 	float:down;

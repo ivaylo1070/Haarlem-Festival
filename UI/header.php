@@ -1,6 +1,6 @@
 
 
-<?php $link_address = "http://localhost/";?>
+<?php $link_address = "";?>
 <img class="Logoright" src="../Img/logo.png" alt="logo"  title ="logo"/>
 <ul>
 	<li><a href="">EN</a></li>
