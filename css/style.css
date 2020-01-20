@@ -81,8 +81,8 @@ li a:hover {
 	 border-width:2px;
 	 border-style:solid;
      border-color:#cc6611;
-} 
-.flex-container-HaarlemIndex .article1 img 
+}
+.flex-container-HaarlemIndex .article1 img
 {
 	  max-width:99% ;
      width:99% ;
@@ -92,7 +92,7 @@ li a:hover {
      background-size: contain;
      background-position: 100% 100%;
      background-repeat: no-repeat;
-} 
+}
  .flex-container-HaarlemIndex .article1 input {
      max-width:50% ;
      width:50% ;
@@ -102,13 +102,13 @@ li a:hover {
 	 margin-top: 50px;
 	 margin-bottom:0px;
 	 margin-left:20% ;
-	
+
 }
  .flex-container-HaarlemIndex .article1 input:hover {
 	 color :#cc6011;
 	 background-color: #fff;
 	 border:solid 2px #cc6011;
-	 
+
 }
 /***************haarlem food*************/
  .flex-container-HaarlemFood ,.flex-container-HaarlemIndex ,.flex-container-reservation{
@@ -155,7 +155,7 @@ li a:hover {
 	 padding: 12px 12px;
 	 margin-top: 50px;
 	 margin-left:20% ;
-	
+
 }
  .flex-container-HaarlemFood .article1 h3 {
 	 color :#cc6011;
@@ -169,12 +169,12 @@ li a:hover {
 	 color :#cc6011;
 	 background-color: #fff;
 	 border:solid 2px #cc6011;
-	 
+
 }
 .searchClass{
 	padding :20px;
 }
-.flex-container-reservation input[type="submit"] 
+.flex-container-reservation input[type="submit"]
 {
      max-width:70% ;
      width:70% ;
@@ -184,11 +184,36 @@ li a:hover {
 	 margin-top: 50px;
 	 margin-left:20% ;
 }
-
+#login{
+  font-size: 28px;
+  color: #cc6011;
+  width:60%;
+  margin:100px auto;
+  background-color: #ffff
+}
+.login-button{
+  width: 30%;
+  color: #ffff;
+  text-align: center;
+  background:#cc6011;
+}
+.login-button2{
+  width: 30%;
+  color: #0000FF;
+  text-align: center;
+  background:#ffff;
+}
 footer {
-  padding: 20px; 
-  text-align: center; 
+  padding: 20px;
+  text-align: center;
   color:#fff;
   background:#cc6011;
   width :100%;
+}
+.cms_button {
+  text-align: center;
+  color:#fff;
+  background:#cc6011;
+  border-style: :none;
+  border-color: #cc6011;
 }

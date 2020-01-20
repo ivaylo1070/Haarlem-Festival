@@ -83,6 +83,8 @@ the city that has everything. From hidden courtyards from bygone times to trendy
 
 </body>
  <footer>
-  <h2>Footer</h2>
+  <h2>@HAARLEMFESTIVAL</h2>
+	<p>Facebook</p>
+<input type="button" class="cms_button" onclick="location.href= '../UI/lgn_cms.php'" class="Redirect" value="CMS"/>
  </footer>
-</html> 
+</html>

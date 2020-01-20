@@ -26,19 +26,29 @@ header("location: event-edit.php"); // Redirecting To The event Page
 
   </header>
 <body>
-  <article id="login">
-  <p> Content management service</p>
-    <form action="" method="post">
-      <label>Username :</label>
-      <input id="name" name="username" placeholder="username" type="text"><br><br>
-      <label>Password :</label>
-      <input id="password" name="password" placeholder="**********" type="password"><br><br>
-      <input name="submit" type="submit" value=" Login " class="login-button"><br><br>
-      <input type="button" value=" Register " onclick="location.href= '../UI/Register.php'" class="login-button"><br><br>
-      <input type="button" value=" Forgot username/password? " class="login-button2">
-      <span><?php echo $error; ?></span>
-    </form>
-  </article>
+<h1>
+  <label>Event categories </label>
+<form method="post">
+  <input type="radio"  name="event" value="all">   <label>All </label>
+    <input type="radio"  name="event" value="food">   <label>Food </label>
+      <input type="radio"  name="event" value="dance">   <label>Dance </label>
+        <input type="radio"  name="event" value="jazz">   <label>Jazz </label>
+</form>
+<?php
+if ($_POST["event"]=="all"){
+
+}
+elseif ($_POST["event"]=="food") {
+  // code...
+
+elseif ($_POST["event"]=="dance") {
+  // code...
+}
+elseif ($_POST["event"]="jazz") {
+  // code...
+}
+?>
+</h1>
 </body>
   <footer>
   	<h2>@HAARLEMFESTIVAL</h2>
