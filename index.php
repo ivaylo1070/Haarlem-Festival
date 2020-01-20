@@ -1,22 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Home</title>
- <meta charset="UTF-8">
-   <meta name="description" content="Haarlem festival haarlem festival " />
-   <meta name="keywords" content="haarlem,events,festival,activites food ,
-    dance,jazz
-    amusement, cheer,products" />
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="css/style.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- <link rel="stylesheet" href="http://flag-icon-css.lip.is/">
+  <?php require("UI/header.php")?>
 </head>
 <body>
-
-	<?php require("UI/header.php")?>
-
- </header>
  <h3>A beautiful historic city center</h3>
  <p class="introduction">
  famous museums, shops,
