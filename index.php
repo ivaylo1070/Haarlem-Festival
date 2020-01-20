@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
    <link rel="stylesheet" href="css/style.css">
   <?php require("UI/header.php")?>
+=======
+<title>Home</title>
+ <meta charset="UTF-8">
+   <meta name="description" content="Haarlem festival haarlem festival " />
+   <meta name="keywords" content="haarlem,events,festival,activites food ,
+    dance,jazz
+    amusement, cheer,products" />
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="css/style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="http://flag-icon-css.lip.is/">
+>>>>>>> 66eb8632000b3c9ff20e4f5115a9116fda0c1f0b
 </head>
 <body>
+<img class="Logoright" src="Img/logo.png" alt=" product 3"  title ="image of super mario"/>
+ <ul>
+   <li><a href="#"><i class="fas fa-language"></i></a></li>
+   <li><a href="#"><i class="fa fa-fw fa-shopping-cart"></i></a></li>
+   <li><a href="#">Haarlem Food</a></li>
+   <li><a href="#">Haarlem Dance</a></li>
+   <li><a href="#">Haarlem Jazz</a></li>
+   <li><a href="#">Home</a></li>
+ </ul>
+ <header class="header">
+
+ </header>
  <h3>A beautiful historic city center</h3>
  <p class="introduction">
  famous museums, shops,
@@ -63,6 +88,8 @@ the city that has everything. From hidden courtyards from bygone times to trendy
 
 </body>
  <footer>
-  <h2>Footer</h2>
+  <h2>@HAARLEMFESTIVAL</h2>
+	<p>Facebook</p>
+<input type="button" class="cms_button" onclick="location.href= '../UI/lgn_cms.php'" class="Redirect" value="CMS"/>
  </footer>
-</html> 
+</html>

@@ -27,15 +27,17 @@ header("location: event-edit.php"); // Redirecting To The event Page
   </header>
 <body>
   <article id="login">
-  <p> Content management service</p>
+  <p> Volunteer Registration </p>
     <form action="" method="post">
       <label>Username :</label>
       <input id="name" name="username" placeholder="username" type="text"><br><br>
       <label>Password :</label>
       <input id="password" name="password" placeholder="**********" type="password"><br><br>
-      <input name="submit" type="submit" value=" Login " class="login-button"><br><br>
-      <input type="button" value=" Register " onclick="location.href= '../UI/Register.php'" class="login-button"><br><br>
-      <input type="button" value=" Forgot username/password? " class="login-button2">
+      <label>E-mail :</label>
+      <input id="mail" name="e-mail" placeholder="e-mail" type="text"><br><br>
+      <label>Phone :</label>
+      <input id="phone" name="phone" placeholder="phone number" type="text"><br><br>
+      <input type="button" value=" Register " class="login-button"><br><br>
       <span><?php echo $error; ?></span>
     </form>
   </article>

@@ -5,7 +5,7 @@
 
 }
 body{
-		width:100%;
+	margin : 15px;
 }
 p.introduction,h3{
 	margin-top:15px;
@@ -35,11 +35,10 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #cc6011;
-  float:right;
 }
 
 img{
-width:100%;
+width:50%;
 
 }
 
@@ -71,8 +70,7 @@ li a:hover {
   background-attachment: fixed;
   background-position: center;
 }
-
-/******* the home page **************/
+/******* the home page **************//*
 .flex-container-HaarlemIndex .article1
 {
 	 min-width:23% ;
@@ -83,8 +81,8 @@ li a:hover {
 	 border-width:2px;
 	 border-style:solid;
      border-color:#cc6611;
-} 
-.flex-container-HaarlemIndex .article1 img 
+}
+.flex-container-HaarlemIndex .article1 img
 {
 	  max-width:99% ;
      width:99% ;
@@ -94,7 +92,7 @@ li a:hover {
      background-size: contain;
      background-position: 100% 100%;
      background-repeat: no-repeat;
-} 
+}
  .flex-container-HaarlemIndex .article1 input {
      max-width:50% ;
      width:50% ;
@@ -104,13 +102,13 @@ li a:hover {
 	 margin-top: 50px;
 	 margin-bottom:0px;
 	 margin-left:20% ;
-	
+
 }
  .flex-container-HaarlemIndex .article1 input:hover {
 	 color :#cc6011;
 	 background-color: #fff;
 	 border:solid 2px #cc6011;
-	 
+
 }
 /***************haarlem food*************/
  .flex-container-HaarlemFood ,.flex-container-HaarlemIndex ,.flex-container-reservation{
@@ -157,7 +155,7 @@ li a:hover {
 	 padding: 12px 12px;
 	 margin-top: 50px;
 	 margin-left:20% ;
-	
+
 }
  .flex-container-HaarlemFood .article1 h3 {
 	 color :#cc6011;
@@ -171,12 +169,12 @@ li a:hover {
 	 color :#cc6011;
 	 background-color: #fff;
 	 border:solid 2px #cc6011;
-	 
+
 }
 .searchClass{
 	padding :20px;
 }
-.flex-container-reservation input[type="submit"] 
+.flex-container-reservation input[type="submit"]
 {
      max-width:70% ;
      width:70% ;
@@ -186,105 +184,36 @@ li a:hover {
 	 margin-top: 50px;
 	 margin-left:20% ;
 }
-
-/**************************Ticket**************************/
-#ticket{
-	border: 1px solid #bdc3c7;
-
-	width: 70em;
-	height:9em;
-	margin: auto;
-	padding:0 0 0 1em;
-	float:up;
-	
-	background-color:#c7c7c7;
+#login{
+  font-size: 28px;
+  color: #cc6011;
+  width:60%;
+  margin:100px auto;
+  background-color: #ffff
 }
-
-
-#ticket label button{
-	width:2em;
-	font-size: 0.8em;
-
+.login-button{
+  width: 30%;
+  color: #ffff;
+  text-align: center;
+  background:#cc6011;
 }
-#ticket label input{
-	width:3em;
-	font-size: 0.8em;
-
+.login-button2{
+  width: 30%;
+  color: #0000FF;
+  text-align: center;
+  background:#ffff;
 }
-
-#addtocart{
-	
-	width:10em;
-	font-size: 2em;
-	float:right;
-	padding:none;
-	margin:0.3em;
-	background-color:#cc6011;
-	border:0.03em solid;
-	border-radius: 0.3em;
-}
-
-#price{
-		width:40%;
-		font-size: 3em ;
-		font-weight: bold;
-		float:left;
-
-}
-#title{
-	width:60%;
-	font-size: 3em;
-	font-weight: bold;
-	float:left;
-
-}
-#quantity{
-	width:40%;
-
-}
-
-
-#ticket label {
-	display: inline-block;
-	width:20em;
-	height:1.1em;
-	font-size: 2em;
-	float:left;
-	
-
-}
-
-#ticket img {
-	width:2em;
-	float:left;
-}
-/********************Sidebar************************/
-
-
-/* Create two columns/boxes that floats next to each other */
-aside {
-  float: right;
-  width: 20%;
-  height: 100%;
-  background: #ccc;
-  padding: 1em;
-}
-
-
-section {
-	width:100%;
-}
-
-article{
-	min-height:40em;
-}
-
-/********************Footer**************************/
 footer {
-	float:down;
-	padding: 1em; 
-	text-align: center; 
-	color:#fff;
-	background:#cc6011;
-	width :100%;
+  padding: 20px;
+  text-align: center;
+  color:#fff;
+  background:#cc6011;
+  width :100%;
+}
+.cms_button {
+  text-align: center;
+  color:#fff;
+  background:#cc6011;
+  border-style: :none;
+  border-color: #cc6011;
 }
