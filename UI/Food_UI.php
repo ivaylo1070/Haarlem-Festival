@@ -6,13 +6,53 @@
 </head>
 <body>
  <h3>A beautiful historic city center</h3>
- <p class="introduction">
- famous museums, shops,
-restaurants and the beach around the corner: welcome to Haarlem,
-the city that has everything. From hidden courtyards from bygone times to trendy concept stores. From medieval church to terrace on the water. From Dutch Masters to French star chefs. From antique market to pop concert. Fancy a memorable day out? Visit Haarlem and be surprised by the sights, boutiques and picturesque squares, by the old and contemporary artists, the Burgundian atmosphere and the rich history.
-</p>
+ <form action="" method="GET">
+      <label class="checkbox-inline">
+      <input type="checkbox" name="type" value="European" id="myCheck" >European
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" name="type" value="seafood" id="myCheck">Seafood
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" name="type" value="All" id="myCheck">All
+      </label>
+        <input type="submit" name="filter" onclick="myFunction()" value="Filter food type">
+    </form>
+
 </body>
+<?php
+    require_once("Dal.php");
+    require_once 'restaurant _dal.php';
+    require_once 'Display.php';
+    echo "<link rel='stylesheet' type='text/css' href='css/style.css' />";
+    session_start();
+
+    $a=$_GET['type'];
+        $dal = Dal::getInstance();
+        $datas=array();
+        if($a=='All' || empty($a))
+        {
+          $datas= $dal-> getAllRestaurants();
+            echo   "<section class=\"flex-container\">";
+             foreach ($datas as $data) 
+             {
+               DisplayDataInFormattedHtml4($data['image'],$data['Name'],$data['Address'],$data['OpeningTime'],$data['Closingtime'],$data['Stars'],$data['Price'],$data['FoodType'],$data['id']);
+             }
+              echo "</section>";
+        }
+        else
+      {
+          $datas = $dal->getRestaurantByFoodType($a);
+           echo   "<section class=\"flex-container\">";
+             foreach ($datas as $data) 
+             {
+               DisplayDataInFormattedHtml4($data['image'],$data['Name'],$data['Address'],$data['OpeningTime'],$data['Closingtime'],$data['Stars'],$data['Price'],$data['FoodType'],$data['id']);
+             }
+              echo "</section>";
+        }
+?>
  <footer>
   <h2>Footer</h2>
  </footer>
 </html> 
+
