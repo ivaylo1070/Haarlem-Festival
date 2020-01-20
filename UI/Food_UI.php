@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
    <link rel="stylesheet" href="../css/style.css">
-    
+
   <?php require("header.php")?>
 </head>
 <body>
@@ -24,6 +24,11 @@
 
 </html> 
 <?php
- include "restaurant_dal";
- $FoodData= new restaurant_dal();
+   include "DAL/restaurant_dal.php";
+
+   $d = restaurant_dal::getInstance();
+   $datas=array();
+   $datas= $d-> getAllRestaurants();
+
+
 ?>
