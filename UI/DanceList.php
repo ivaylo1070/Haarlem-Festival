@@ -13,16 +13,21 @@
  <link rel="stylesheet" href="http://flag-icon-css.lip.is/">
 </head>
 <body>
-<img class="Logoright" src="Img/logo.png" alt=" product 3"  title ="image of super mario"/>
- <ul>
-   <li><a href="#"><i class="fas fa-language"></i></a></li>
-   <li><a href="#"><i class="fa fa-fw fa-shopping-cart"></i></a></li>
-   <li><a href="#">Haarlem Food</a></li>
-   <li><a href="#">Haarlem Dance</a></li>
-   <li><a href="#">Haarlem Jazz</a></li>
-   <li><a href="#">Home</a></li>
- </ul>
- <header class="header">
+	<?php require("UI/header.php")?>
+<h1>HAARLEM FESTIVAL DANCE PROGRAM </h1>
+	<form>
+			<p>
+			<label for="">Sort by</label>
+	    <input type="radio"name="sort" checked>
+	    <label for="date"> Date </label>
+	    <input type="radio"name="sort">
+	    <label for="artist">Artist</label>
+		</p>
+	</form>
+	<form class="" action="cart.php" method="post">
+		<a href="cart.php">view cart</a>
+	</form>
+<table>
 
  </header>
  <h3>A beautiful historic city center</h3>
