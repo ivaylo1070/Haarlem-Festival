@@ -1,47 +1,43 @@
 <?php
-include('../DAL/dhs_login.php'); // Includes Login Script
+include('Model/dhs_login.php'); // Includes Login Script
 if(isset($_SESSION['login_user'])){
-header("location: event-edit.php"); // Redirecting To The event Page
+header("location: profile.php"); // Redirecting To Profile Page
 }
-?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta name="description" content="This is the volunteer login page for the content management system.">
     <meta name="keywords" content="cms, content, haarlem, festival, event">
-    <link rel="stylesheet" href="../css/style.css">
+    <link href="style/cms_login.css" rel="stylesheet" type="text/css">
     <title>Haarlem festival</title>
 
   </head>
-  <img class="Logoright" src="../Img/logo.png" alt="logo"  title ="logo"/>
-  <ul>
-    <li><a href="#">EN</a></li>
-    <li><a href="#" class="userIcon" >Username</a></li>
-    <li><a href="#">Haarlem Food</a></li>
-    <li><a href="#">Haarlem Dance</a></li>
-    <li><a href="#">Haarlem Jazz</a></li>
-    <li><a href="#">Home</a></li>
-  </ul>
-  <header class="header">
-
+  <header>
+    <nav>
+      <a href='#'>
+        <img src="img/logo.jpg">
+      </a>
+      <a href='background'>
+        <img src="img/header_img.jpg">
+      </a>
+      <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="haarlem_food.php">Haarlem Food</a></li>
+        <li><a href="haarlem_dance.php">Haarlem Dance</a></li>
+        <li><a href="haarlem_jazz.php">Haarlem Jazz</a></li>
+      </ul>
+    </nav>
   </header>
 <body>
   <article id="login">
-  <p> Content management service</p>
+  <h2>Login Form</h2>
     <form action="" method="post">
-      <label>Username :</label>
-      <input id="name" name="username" placeholder="username" type="text"><br><br>
+      <label>UserName :</label>
+      <input id="name" name="username" placeholder="username" type="text">
       <label>Password :</label>
       <input id="password" name="password" placeholder="**********" type="password"><br><br>
-      <input name="submit" type="submit" value=" Login " class="login-button"><br><br>
-      <input type="button" value=" Register " onclick="location.href= '../UI/Register.php'" class="login-button"><br><br>
-      <input type="button" value=" Forgot username/password? " class="login-button2">
+      <input name="submit" type="submit" value=" Login ">
       <span><?php echo $error; ?></span>
     </form>
   </article>
-</body>
-  <footer>
-  	<h2>@HAARLEMFESTIVAL</h2>
-  	<p>Facebook</p>
-  </footer>
 </html>
