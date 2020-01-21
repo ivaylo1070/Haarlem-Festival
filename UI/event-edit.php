@@ -35,18 +35,14 @@ header("location: event-edit.php"); // Redirecting To The event Page
         <input type="radio"  name="event" value="jazz">   <label>Jazz </label>
 </form>
 <?php
-if ($_POST["event"]=="all"){
+//if ($_POST["event"]=="all"){
 
-}
-elseif ($_POST["event"]=="food") {
-  // code...
-
-elseif ($_POST["event"]=="dance") {
-  // code...
-}
-elseif ($_POST["event"]="jazz") {
-  // code...
-}
+//}
+// ($_POST["event"]=="food") {}
+//elseif ($_POST["event"]=="dance") {
+  // code...}
+//elseif ($_POST["event"]="jazz") {
+  // code...}
 ?>
 </h1>
 </body>

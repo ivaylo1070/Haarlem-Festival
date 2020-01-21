@@ -26,9 +26,9 @@
 <?php
    include "DAL/restaurant_dal.php";
 
-   $d = restaurant_dal::getInstance();
+   $dal = restaurant_dal::getInstance();
    $datas=array();
-   $datas= $d-> getAllRestaurants();
+   $datas= $dal-> getAllRestaurants();
 
 
 ?>
