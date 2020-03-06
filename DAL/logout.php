@@ -1,6 +1,9 @@
 <?php
 session_start();
-if(session_destroy()) // Destroying All Sessions {
+session_destroy()
+
+$_SESSION=array();
+// Destroying All Sessions {
 header("Location: ../UI/lgn_cms.php"); // Redirecting
-}
+
 ?>
