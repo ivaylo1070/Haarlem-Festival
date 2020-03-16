@@ -86,7 +86,7 @@ class UserDAO
        //encrypts password
        $passwordHash = password_hash($new_password, PASSWORD_BCRYPT);
 
-       $query="UPDATE login SET password='$passwordHash' WHERE username='$username'";
+       $query="UPDATE Volunteer SET password='$passwordHash' WHERE username='$username'";
        $stmt = $this->conn->prepare($query);
        $stmt->bindValue(':username', $username);
        $stmt->bindValue(':password', $passwordHash);
@@ -99,7 +99,7 @@ class UserDAO
 
        $check=true;
 
-       $query = "SELECT COUNT(Email) AS num FROM login WHERE Email = '$new_e_mail'";
+       $query = "SELECT COUNT(Email) AS num FROM Volunteer WHERE Email = '$new_e_mail'";
 
        $stmt = $this->conn->prepare($query);
        $stmt->bindValue(':Email', $new_e_mail);
@@ -118,7 +118,7 @@ class UserDAO
    function ChangeEmail($username,$new_e_mail)
    {
 
-     $query="UPDATE login SET Email='$new_e_mail' WHERE username='$username'";
+     $query="UPDATE Volunteer SET Email='$new_e_mail' WHERE username='$username'";
      $stmt = $this->conn->prepare($query);
      $stmt->bindValue(':username', $username);
      $stmt->bindValue(':Email', $new_e_mail);
@@ -130,7 +130,7 @@ class UserDAO
    function DeleteUser($username)
    {
 
-       $query="DELETE FROM login WHERE username='$username'";
+       $query="DELETE FROM Volunteer WHERE username='$username'";
        $stmt = $this->conn->prepare($query);
        $stmt->bindValue(':username', $username);
 
@@ -141,7 +141,7 @@ class UserDAO
      function GetNewEmail($username)
      {
 
-         $query="SELECT Email FROM login WHERE username='$username'";
+         $query="SELECT Email FROM Volunteer WHERE username='$username'";
          $stmt = $this->conn->prepare($query);
          $stmt->bindValue(':username', $username);
 
@@ -158,7 +158,7 @@ class UserDAO
 
        $check=true;
 
-       $query = "SELECT COUNT(Email) AS num FROM login WHERE Email = '$recovery_e_mail'";
+       $query = "SELECT COUNT(Email) AS num FROM Volunteer WHERE Email = '$recovery_e_mail'";
 
        $stmt = $this->conn->prepare($query);
        $stmt->bindValue(':Email', $recovery_e_mail);
@@ -212,7 +212,7 @@ class UserDAO
       //encrypts password
       $passwordHash = password_hash($new_pass, PASSWORD_BCRYPT);
 
-      $query = "UPDATE login SET password='$passwordHash' WHERE Email='$email'";
+      $query = "UPDATE Volunteer SET password='$passwordHash' WHERE Email='$email'";
       $stmt = $this->conn->prepare($query);
 
       $stmt->bindValue(':password', $passwordHash);
