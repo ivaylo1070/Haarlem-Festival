@@ -1,5 +1,5 @@
 <?php
-include('Model/dhs_login.php'); // Includes Login Script
+include('../Logic/Login_Service.php'); // Includes Login Script
 if(isset($_SESSION['login_user'])){
 header("location: profile.php"); // Redirecting To Profile Page
 }

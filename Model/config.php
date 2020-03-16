@@ -1,23 +1,46 @@
-
 <?php
-class config{
-private $servername;
-private $username;
-private $password;
-private $dbhname;
+//defines set of all the constants needed to make connection to the database
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'hfitteam4_user');
+define('DB_PASSWORD', 'b6YMJTmc');
+define('DB_NAME', 'hfitteam4_db');
 
-public function Connect(){
-		$this->servername = "localhost";
-		$this->username = "root";
-		$this->password = "";
-		$this->dbhname = "haarlem_f";
+// class that is used to make connection to database via singleton pattern
+class Config
+{
+  // variables instance and conn unaccessible outside of Config class directly
+  private static $instance= null;
+  private $conn;
 
-		$conn = new mysqli($this->servername,$this->username,$this->password,$this->dbhname);
+    private function __construct()
+    {
+      try{
+        // sets database connection using PDO with the constants defined above
+        $this->conn = new PDO('mysql:host='.DB_SERVER.'; dbname='.DB_NAME, DB_USERNAME, DB_PASSWORD);
+        // sets attribute for when an exception is made while trying to connect
+        $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		if (!$conn) {
-			die ("connection failed ".mysqli_connect_error());
-		}
-		return $conn;
-	}
+          }
+          //echoes error if connecting to the database doent work
+      catch(PDOException $error )
+          {
+            throw new PDOException("No connection to the database");// throws this error if there is no connection to the database or other errorwith it
+          }
+    }
+    // generates new instance if there is none
+    public static function getInstance()
+    {
+      if (self::$instance == null)
+    {
+      self::$instance = new Config();
+    }
+
+    return self::$instance;
+    }
+    // it provides a connection outside of class Config
+    public function getConnection()
+  {
+    return $this->conn;
+  }
 }
 ?>

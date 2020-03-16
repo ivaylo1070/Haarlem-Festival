@@ -16,7 +16,6 @@
 
 	<?php require("UI/header.php")?>
 
- </header>
  <h3>A beautiful historic city center</h3>
  <p class="introduction">
  famous museums, shops,
@@ -76,5 +75,11 @@ the city that has everything. From hidden courtyards from bygone times to trendy
 </body>
  <footer>
   <h2>Footer</h2>
+  <nav class="footer_nav">
+    <ul>
+      <li><a href="http://www.facebook.com">Facebook</a></li>
+      <li><a onClick="document.location.href='UI/lgn_cms.php'">CMS</a></li>
+    </ul>
+  </nav>
  </footer>
-</html> 
+</html>
