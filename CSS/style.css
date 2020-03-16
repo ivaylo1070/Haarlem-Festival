@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 *{
      margin:0px;
      padding:0;
@@ -307,8 +307,7 @@ article{
   border-style: :none;
   border-color: #cc6011;
 }
-<<<<<<< HEAD
-=======
+
 *{
      margin:0px;
      padding:0;
@@ -528,8 +527,7 @@ footer {
   border-style: :none;
   border-color: #cc6011;
 }
->>>>>>> 8e0c5c8c2960c6d04fd45c613e5288412df108e4
-=======
+
 /********************Footer**************************/
 footer {
 	float:down;
@@ -539,4 +537,3 @@ footer {
 	background:#cc6011;
 	width :100%;
 }
->>>>>>> 323fd402bfd011d95fe3d38d3cbe64dedfb3f3a6
