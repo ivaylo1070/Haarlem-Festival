@@ -1,8 +1,5 @@
 <?php
-include('../DAL/dhs_login.php'); // Includes Login Script
-if(isset($_SESSION['login_user'])){
-header("location: event-edit.php"); // Redirecting To The event Page
-}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,23 +24,8 @@ header("location: event-edit.php"); // Redirecting To The event Page
   </header>
 <body>
 <h1>
-  <label>Event categories </label>
-<form method="post">
-  <input type="radio"  name="event" value="all">   <label>All </label>
-    <input type="radio"  name="event" value="food">   <label>Food </label>
-      <input type="radio"  name="event" value="dance">   <label>Dance </label>
-        <input type="radio"  name="event" value="jazz">   <label>Jazz </label>
+  <label>Welcome </label>
 </form>
-<?php
-//if ($_POST["event"]=="all"){
-
-//}
-// ($_POST["event"]=="food") {}
-//elseif ($_POST["event"]=="dance") {
-  // code...}
-//elseif ($_POST["event"]="jazz") {
-  // code...}
-?>
 </h1>
 </body>
   <footer>
