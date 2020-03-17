@@ -32,7 +32,7 @@ class UserDAO
   //default value
   $check=true;
 
-  $query = "SELECT COUNT(username) AS num FROM Voluneer WHERE username = '$username'";
+  $query = "SELECT COUNT(username) AS num FROM Volunteer WHERE username = '$username'";
 
   $stmt = $this->conn->prepare($query);
   $stmt->bindValue(':username', $username);
@@ -48,7 +48,7 @@ class UserDAO
   }
 }
 //function to write user into the database
- function Register($phone,$username,$password,$new_e_mail,$status)
+ function Register($username,$password,$new_e_mail,$status,$phone_number)
   {
       //hashes password value
       $passwordHash = password_hash($password, PASSWORD_BCRYPT);
@@ -57,7 +57,7 @@ class UserDAO
       //
       $stmt = $this->conn->prepare($query);
       // binds all values to string
-      $stmt->bindValue(':phone', $phone);
+      $stmt->bindValue(':phone', $phone_number);
       $stmt->bindValue(':username', $username);
       $stmt->bindValue(':password', $passwordHash);
       $stmt->bindValue(':Email', $new_e_mail);
@@ -66,20 +66,7 @@ class UserDAO
       $stmt->execute();
 
   }
-  //provides new id by reading the last id and adding +1
-  function GetNewID()
-   {
-       $query="SELECT MAX(`id`) FROM `login`";
-       $stmt = $this->conn->prepare($query);
-       $stmt->execute();
 
-       //fetches only result with fetchColumn
-       $value=1+$stmt->fetchColumn();
-
-       return $value;
-
-
-   }
    //changes pasword in database with $new_password for a specific user
    function ChangePassword($username,$new_password)
    {

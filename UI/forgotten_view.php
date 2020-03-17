@@ -1,6 +1,5 @@
 <?php
-include('../Logic/Login_Service.php'); // Includes Login Script
-
+include('../Logic/Recovery_Service.php'); // Includes Login Script
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,25 +29,26 @@ include('../Logic/Login_Service.php'); // Includes Login Script
     </header>
   </header>
 <body>
-  <p class="page_title">Content manager service - Login</p>
-  <article id="login">
-    <form action="" method="post">
-      <label class="cms_label">Name :</label>
-      <input id="name" name="username" placeholder="username" type="text"><br><br>
-      <label class="cms_label">Password :</label>
-      <input id="password" name="password" placeholder="**********" type="password"><br><br>
-      <input name="login" type="submit" value=" Log in " class="cms_button"><br><br>
-      <input name="register" type="submit" value=" Regiter "class="cms_button" onClick="document.location.href='Register_view.php'"><br><br>
-      <p class="forgotten" ><a onClick="document.location.href='UI/forgotten_view.php'">Forgot username/password?</a>.</p><br><br>
+  <p class="page_title">Content manager service - Account recovery</p>
 
-
-    <?php if (isset($message))//displays error message to user
-     {
-      echo '<label class="text-warning">'.$message.'</label>'.'<br><br>';
-    }
-      ?>
+    <form action="" class="a_recovery-form" method="post">
+      <label>E-mail :</label>
+      <input id="a_e-mail" name="r_e-mail" placeholder="e-mail" type="text"><br><br>
+      <?php if (isset($_SESSION['error']))//displays error message to user
+       {
+        echo '<label class="text-warning">'.$_SESSION['error'].'</label>'.'<br><br>';
+        unset($_SESSION['error']);
+      }
+        ?>
+      <?php if (isset($message))//displays error message to user
+      {
+        echo '<label class="text-warning">'.$message.'</label>'.'<br><br>';
+      }
+        ?>
+      <input name="recover" type="submit" value=" Send "><br><br>
+      <p class="no_account" >Don't have an account? <a onClick="document.location.href='Register_view.php'">Sign up now</a>.</p>
     </form>
-  </article>
+
 
     <footer>
     	<h2>@HAARLEMFESTIVAL</h2>

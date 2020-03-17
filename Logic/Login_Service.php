@@ -37,7 +37,7 @@ if (isset($_POST["login"]))
         //stores non-trivial user values into session variables
       $_SESSION['username'] = $results[0]["username"];
       $_SESSION['password'] = $results[0]["password"];
-      $_SESSION['e_mail'] = $results[0]["Email"];
+      $_SESSION['e_mail'] = $results[0]["email"];
 
       header("location: /UI/event-edit.php");
       }
@@ -51,5 +51,9 @@ if (isset($_POST["login"]))
       $message ='<label> Wrong Data</label>';
         }
   }
+}
+if(isset($_POST["register"]))
+{
+  header("location: /UI/Register_view.php");
 }
 ?>

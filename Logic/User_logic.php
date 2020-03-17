@@ -14,13 +14,12 @@ class User_logic
 
   }
   //method used to access the register mehtod intp the database
-  function CreateUserLogic($username,$password,$new_e_mail,$status)
+  function CreateUserLogic($username,$password,$new_e_mail,$status,$phone_number)
   {
 
-      //calls new id method in database class to get new id from it
-      $id = $this->DB_user_conn->GetNewID();
+
       //calls register method in database class
-      $this->DB_user_conn ->Register($id,$username,$password,$new_e_mail,$status);
+      $this->DB_user_conn ->Register($username,$password,$new_e_mail,$status,$phone_number);
 
 
   }
