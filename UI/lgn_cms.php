@@ -10,35 +10,37 @@ header("location: profile.php"); // Redirecting To Profile Page
     <meta name="description" content="This is the volunteer login page for the content management system.">
     <meta name="keywords" content="cms, content, haarlem, festival, event">
     <link href="style/cms_login.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../CSS/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://flag-icon-css.lip.is/">
     <title>Haarlem festival</title>
 
   </head>
   <header>
-    <nav>
-      <a href='#'>
-        <img src="img/logo.jpg">
-      </a>
-      <a href='background'>
-        <img src="img/header_img.jpg">
-      </a>
-      <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="haarlem_food.php">Haarlem Food</a></li>
-        <li><a href="haarlem_dance.php">Haarlem Dance</a></li>
-        <li><a href="haarlem_jazz.php">Haarlem Jazz</a></li>
-      </ul>
-    </nav>
+    <?php $link_address = "";?>
+    <img class="Logoright" src="../Img/logo.png" alt="logo"  title ="logo"/>
+    <ul>
+    	<li><a href="">EN</a></li>
+    	<li><a href="<?php echo $link_address;?>" class="cartIcon" ></a></li>
+    	<li><a href="<?php echo $link_address;?>UI/Food_UI.php">Haarlem Food</a></li>
+    	<li><a href="<?php echo $link_address;?>UI/Dance_UI.php">Haarlem Dance</a></li>
+    	<li><a href="<?php echo $link_address;?>UI/Jazz_UI.php">Haarlem Jazz</a></li>
+    	<li><a href="<?php echo $link_address;?>index.php">Home</a></li>
+    </ul>
+    <header class="header">
+    <!--for background image-->
+    </header>
   </header>
 <body>
+  <p class="page_title">Content manager service - Login</p>
   <article id="login">
-  <h2>Login Form</h2>
     <form action="" method="post">
-      <label>Name :</label>
-      <input id="name" name="username" placeholder="username" type="text">
-      <label>Password :</label>
+      <label class="cms_label">Name :</label>
+      <input id="name" name="username" placeholder="username" type="text"><br><br>
+      <label class="cms_label">Password :</label>
       <input id="password" name="password" placeholder="**********" type="password"><br><br>
-      <input name="login" type="submit" value=" Login ">
-      <input name="register" type="submit" value=" Regiter ">
+      <input name="login" type="submit" value=" Log in " class="cms_button"><br><br>
+      <input name="register" type="submit" value=" Regiter "class="cms_button"><br><br>
       <p class="forgotten" ><a onClick="document.location.href='UI/forgotten_view.php'">Forgot username/password?</a>.</p><br><br>
 
 
@@ -49,4 +51,12 @@ header("location: profile.php"); // Redirecting To Profile Page
       ?>
     </form>
   </article>
-</html>
+  <footer class="footer">
+   <nav id="footer_nav">
+     <p>@HAARLEMFESTIVAL</p>
+     <ul>
+       <li><a href="http://www.facebook.com">Facebook</a></li>
+     </ul>
+   </nav>
+  </footer>
+  </html>
