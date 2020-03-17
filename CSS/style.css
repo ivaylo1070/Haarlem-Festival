@@ -276,29 +276,19 @@ aside {
 section {
 	width:100%;
 }
-
+/* please gige this id number or class name not superglobal article it confuses explorer
 article{
 	min-height:40em;
-}
+}*/
 /********************CMS*****************************/
 #login{
   font-size: 28px;
   color: #cc6011;
   width:60%;
-  margin:100px auto;
-  background-color: #ffff
-}
-.login-button{
-  width: 30%;
-  color: #ffff;
+  margin:50px auto;
+  background-color: #ffff;
   text-align: center;
-  background:#cc6011;
-}
-.login-button2{
-  width: 30%;
-  color: #0000FF;
-  text-align: center;
-  background:#ffff;
+  font: Arial;
 }
 .cms_button {
   text-align: center;
@@ -306,26 +296,53 @@ article{
   background:#cc6011;
   border-style: :none;
   border-color: #cc6011;
+  width: 284px;
+  height: 64px;
+  font-size:13px;
 }
 
 *{
      margin:0px;
      padding:0;
-     font-family: "Times New Roman", Times, serif;
+}
 
-}
-body{
-	margin : 15px;
-}
-p.introduction,h3{
-	margin-top:15px;
-	text-align:center;
-}
- h3{
-color:#cc6011;
-}
 .forgotten{
   color: #0000ff;
+  font-size:13px;
+}
+.page_title
+{
+  color:#cc6011;
+  font-size:18px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.cms_label
+{
+  font-weight: bold;
+  font-size:13px;
+  text-decoration: underline;
+  margin-right: 50px;
+}
+#name
+{
+  width: 431px;
+  height: 31px;
+}
+#password
+{
+  width: 431px;
+  height: 31px;
+}
+
+#footer_nav
+{
+  align-content: center;
+	color:#fff;
+	background:#cc6011;
+	width :100%;
 }
 
 /******* header **************/
@@ -497,43 +514,11 @@ li a:hover {
 	 margin-top: 50px;
 	 margin-left:20% ;
 }
-#login{
-  font-size: 28px;
-  color: #cc6011;
-  width:60%;
-  margin:100px auto;
-  background-color: #ffff
-}
-.login-button{
-  width: 30%;
-  color: #ffff;
-  text-align: center;
-  background:#cc6011;
-}
-.login-button2{
-  width: 30%;
-  color: #0000FF;
-  text-align: center;
-  background:#ffff;
-}
-footer {
-  padding: 20px;
-  text-align: center;
-  color:#fff;
-  background:#cc6011;
-  width :100%;
-}
-.cms_button {
-  text-align: center;
-  color:#fff;
-  background:#cc6011;
-  border-style: :none;
-  border-color: #cc6011;
-}
+
 
 /********************Footer**************************/
 footer {
-	float:down;
+
 	padding: 1em;
 	text-align: center;
 	color:#fff;
