@@ -1,6 +1,6 @@
 <?php
 
-include(realpath(dirname(__FILE__) . '/../Model') . "/User_DAO.php"); //includes User_Dao script
+include(realpath(dirname(__FILE__) . '/../DAL') . "/User_DAO.php"); //includes User_Dao script
 
 class User_logic
 {
