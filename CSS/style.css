@@ -281,7 +281,7 @@ article{
 	min-height:40em;
 }*/
 /********************CMS*****************************/
-#login{
+#login,.register-form{
   font-size: 28px;
   color: #cc6011;
   width:60%;
@@ -326,12 +326,7 @@ article{
   text-decoration: underline;
   margin-right: 50px;
 }
-#name
-{
-  width: 431px;
-  height: 31px;
-}
-#password
+#name,#password,#confirm_password,#e-mail,#phone
 {
   width: 431px;
   height: 31px;
