@@ -281,7 +281,7 @@ article{
 	min-height:40em;
 }*/
 /********************CMS*****************************/
-#login,.register-form{
+#login,.register-form,.recovery-form{
   font-size: 28px;
   color: #cc6011;
   width:60%;
@@ -300,6 +300,10 @@ article{
   height: 64px;
   font-size:13px;
 }
+.cms_button:hover {
+  background-color: #fff;
+  color: #cc6011;
+}
 
 *{
      margin:0px;
@@ -309,6 +313,10 @@ article{
 .forgotten{
   color: #0000ff;
   font-size:13px;
+}
+.forgotten:hover
+{
+  text-decoration: underline;
 }
 .page_title
 {
@@ -338,6 +346,10 @@ article{
 	color:#fff;
 	background:#cc6011;
 	width :100%;
+}
+.text-warning{
+  color: #ff0000;
+  font-size:13px;
 }
 
 /******* header **************/

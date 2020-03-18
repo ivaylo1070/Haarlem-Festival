@@ -32,7 +32,7 @@ if (isset($_POST["login"]))
 
     if(count($results) > 0)//if there is existing user with this information it executes following script
     {
-      if($password= $results[0]["password"]) //checks if encrypted password in database and typed by user match
+      if(password_verify($password, $results[0]["password"])) //checks if encrypted password in database and typed by user match
       {
         //stores non-trivial user values into session variables
       $_SESSION['username'] = $results[0]["username"];

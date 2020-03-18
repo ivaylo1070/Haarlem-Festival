@@ -7,15 +7,17 @@ class User
   private $username;
   private $password;
   private $email;
+  private $phone_number;
   private $status;
 
-public function __construct($ID,$Username,$Password,$Email,$Status)
+public function __construct($ID,$Username,$Password,$Email,$Status,$Phone_number)
 {
 $this->id=$ID;
 $this->username=$Username;
 $this->password=$Password;
 $this->email=$Email;
 $this->status=$Status;
+$this->phone_number=$Phone_number;
 }
   //getter for username
   public function get_username()

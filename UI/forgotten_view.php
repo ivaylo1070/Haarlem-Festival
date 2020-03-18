@@ -31,9 +31,9 @@ include('../Logic/Recovery_Service.php'); // Includes Login Script
 <body>
   <p class="page_title">Content manager service - Account recovery</p>
 
-    <form action="" class="a_recovery-form" method="post">
-      <label>E-mail :</label>
-      <input id="a_e-mail" name="r_e-mail" placeholder="e-mail" type="text"><br><br>
+    <form action="" class="recovery-form" method="post">
+      <label class="cms_label">E-mail :</label>
+      <input id="e-mail" name="r_e-mail" placeholder="e-mail" type="text"><br><br>
       <?php if (isset($_SESSION['error']))//displays error message to user
        {
         echo '<label class="text-warning">'.$_SESSION['error'].'</label>'.'<br><br>';
@@ -45,8 +45,8 @@ include('../Logic/Recovery_Service.php'); // Includes Login Script
         echo '<label class="text-warning">'.$message.'</label>'.'<br><br>';
       }
         ?>
-      <input name="recover" type="submit" value=" Send "><br><br>
-      <p class="no_account" >Don't have an account? <a onClick="document.location.href='Register_view.php'">Sign up now</a>.</p>
+      <input name="recover" class="cms_button"type="submit" value=" Send "><br><br>
+      <p class="forgotten" >Don't have an account? <a onClick="document.location.href='Register_view.php'">Sign up now</a>.</p>
     </form>
 
 

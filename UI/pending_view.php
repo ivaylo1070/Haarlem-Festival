@@ -1,5 +1,5 @@
 <?php
-include('../Logic/Login_Service.php'); // Includes Login Script
+include('../Logic/Recovery_Service.php'); // Includes Login Script
 
 ?>
 <!DOCTYPE html>
@@ -30,24 +30,26 @@ include('../Logic/Login_Service.php'); // Includes Login Script
     </header>
   </header>
 <body>
-  <p class="page_title">Content manager service - Login</p>
-  <article id="login">
-    <form action="" method="post">
-      <label class="cms_label">Name :</label>
-      <input id="name" name="username" placeholder="username" type="text"><br><br>
-      <label class="cms_label">Password :</label>
-      <input id="password" name="password" placeholder="**********" type="password"><br><br>
-      <input name="login" type="submit" value=" Log in " class="cms_button"><br><br>
-      <input name="register" type="submit" value=" Regiter "class="cms_button" onClick="document.location.href='Register_view.php'"><br><br>
-      <p class="forgotten" ><a onClick="document.location.href='forgotten_view.php'">Forgot username/password?</a>.</p><br><br>
-    <?php if (isset($message))//displays error message to user
-     {
-      echo '<label class="text-warning">'.$message.'</label>'.'<br><br>';
-    }
-      ?>
-    </form>
-  </article>
+  <form class="recovery-form" method="post">
+		<p>We sent an email to help you recover your account.</p><br><br>
+	  <p>Please enter the token down to verify your recovery</p><br><br>
+      <label class="cms_label">Enter your token here:</label>
+			<input id="password" type="password" name="token_value"><br><br>
+      <?php if (isset($_SESSION['error']))//displays error message to user
+       {
+        echo '<label class="text-warning">'.$_SESSION['error'].'</label>'.'<br><br>';
+        unset($_SESSION['error']);
+      }
+        ?>
+      <?php if (isset($message))//displays error message to user
+       {
+        echo '<label class="text-warning">'.$message.'</label>'.'<br><br>';
+      }
+        ?>
+      <input name="token" class="cms_button" type="submit" value="Submit"><br><br>
+	</form>
 </body>
+
     <footer>
     	<h2>@HAARLEMFESTIVAL</h2>
     	<p>Facebook</p>

@@ -16,19 +16,13 @@ class User_logic
   //method used to access the register mehtod intp the database
   function CreateUserLogic($username,$password,$new_e_mail,$status,$phone_number)
   {
-
-
       //calls register method in database class
       $this->DB_user_conn ->Register($username,$password,$new_e_mail,$status,$phone_number);
-
-
   }
   //calls delete method inside UserDAO class
   function DeleteUserLogic($username)
   {
-
       $this->DB_user_conn->DeleteUser($username);
-
   }
   // calls the method to retrieve user information so the login can be established
   function ConnectUserLogic($username,$password)
@@ -62,19 +56,15 @@ class User_logic
       $check=$this->DB_user_conn->CheckEmailExist($new_e_mail);
 
       return $check;
-
-
   }
   //method calls DB layer to check if user has taken this username
   function CheckUsernameLogic($username)
   {
-
       $check=true;
 
       $check=$this->DB_user_conn->CheckUserExist($username);
 
       return $check;
-
   }
   // it retrives e-mail from DB layer after it has beem changed in profile page
     function GetNewEmailLogic($username)
@@ -82,7 +72,6 @@ class User_logic
         $result=$this->DB_user_conn->GetNewEmail($username);
 
         return $result;
-
   }
   // this method calls DAO to check retreive from if user with specific e-mail exists
   function ResetLogic($recovery_e_mail)
@@ -102,9 +91,9 @@ class User_logic
     $this->DB_user_conn->DB_InsertToken($recovery_e_mail,$token);
 
     $to = $recovery_e_mail; // to whom token will be sent
-    $subject = "Reset your password on 627341.infhaarlem.nl";
+    $subject = "Reset your password on hfitteam4.infhaarlem.nl/";
     //message with token's value added for user to read when they open message
-    $msg = "Hi there, this is your recovery token " . $token . " use it to reset your password on our site or use http://627341.infhaarlem.nl/UI/pending_view.php";
+    $msg = "Hi there, this is your recovery token " . $token . " use it to reset your password on our site or use http://hfitteam4.infhaarlem.nl/UI/pending_view.php";
     $msg = wordwrap($msg,70);
     //from whom this is sent
     $headers = "From: 627341@student.inholland.nl";

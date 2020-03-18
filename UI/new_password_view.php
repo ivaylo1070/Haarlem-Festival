@@ -1,5 +1,5 @@
 <?php
-include('../Logic/Login_Service.php'); // Includes Login Script
+include('../Logic/Recovery_Service.php'); // Includes Login Script
 
 ?>
 <!DOCTYPE html>
@@ -30,24 +30,27 @@ include('../Logic/Login_Service.php'); // Includes Login Script
     </header>
   </header>
 <body>
-  <p class="page_title">Content manager service - Login</p>
-  <article id="login">
-    <form action="" method="post">
-      <label class="cms_label">Name :</label>
-      <input id="name" name="username" placeholder="username" type="text"><br><br>
-      <label class="cms_label">Password :</label>
-      <input id="password" name="password" placeholder="**********" type="password"><br><br>
-      <input name="login" type="submit" value=" Log in " class="cms_button"><br><br>
-      <input name="register" type="submit" value=" Regiter "class="cms_button" onClick="document.location.href='Register_view.php'"><br><br>
-      <p class="forgotten" ><a onClick="document.location.href='forgotten_view.php'">Forgot username/password?</a>.</p><br><br>
-    <?php if (isset($message))//displays error message to user
-     {
-      echo '<label class="text-warning">'.$message.'</label>'.'<br><br>';
-    }
-      ?>
+  <p class="page_title">Account-recovery new password</p><br><br>
+    <form action="" class="recovery-form" method="post">
+      <label class="cms_label">New password</label>
+			<input id="password" type="password" name="new_pass"><br><br>
+      <label class="cms_label">Confirm new password</label>
+			<input id="password" type="password" name="new_pass_c"><br><br>
+      <?php if (isset($_SESSION['error']))//displays error message to user
+       {
+        echo '<label class="text-warning">'.$_SESSION['error'].'</label>'.'<br><br>';
+        unset($_SESSION['error']);
+      }
+        ?>
+      <?php if (isset($message))//displays error message to user
+       {
+        echo '<label class="text-warning">'.$message.'</label>'.'<br><br>';
+      }
+        ?>
+      <input class="cms_button" name="new_password" type="submit" value="Submit"><br><br>
     </form>
-  </article>
 </body>
+
     <footer>
     	<h2>@HAARLEMFESTIVAL</h2>
     	<p>Facebook</p>

@@ -16,7 +16,7 @@ class UserDAO
   function ConnectUser($username,$password)
   {
     // query to select all data of particular user from the database with limit of 1
-      $query = "SELECT * FROM Volunteer WHERE username ='$username' LIMIT 1";
+      $query = "SELECT * FROM volunteer WHERE username ='$username' LIMIT 1";
 
       $stmt = $this->conn->prepare($query);
       $stmt->execute(array('username' => $username, 'password' => $password));
@@ -32,7 +32,7 @@ class UserDAO
   //default value
   $check=true;
 
-  $query = "SELECT COUNT(username) AS num FROM Volunteer WHERE username = '$username'";
+  $query = "SELECT COUNT(username) AS num FROM volunteer WHERE username = '$username'";
 
   $stmt = $this->conn->prepare($query);
   $stmt->bindValue(':username', $username);
@@ -53,14 +53,14 @@ class UserDAO
       //hashes password value
       $passwordHash = password_hash($password, PASSWORD_BCRYPT);
       // writes all user information into database
-      $query = "INSERT INTO Volunteer (username, password, Email, status, phone) VALUES (:username, :password, :Email, :status, :phone)";
+      $query = "INSERT INTO volunteer (username, password, Email, status, phone) VALUES (:username, :password, :email, :status, :phone)";
       //
       $stmt = $this->conn->prepare($query);
       // binds all values to string
       $stmt->bindValue(':phone', $phone_number);
       $stmt->bindValue(':username', $username);
       $stmt->bindValue(':password', $passwordHash);
-      $stmt->bindValue(':Email', $new_e_mail);
+      $stmt->bindValue(':email', $new_e_mail);
       $stmt->bindValue(':status', $status);
       // executes statement to the database
       $stmt->execute();
@@ -86,10 +86,10 @@ class UserDAO
 
        $check=true;
 
-       $query = "SELECT COUNT(Email) AS num FROM Volunteer WHERE Email = '$new_e_mail'";
+       $query = "SELECT COUNT(email) AS num FROM volunteer WHERE email = '$new_e_mail'";
 
        $stmt = $this->conn->prepare($query);
-       $stmt->bindValue(':Email', $new_e_mail);
+       $stmt->bindValue(':email', $new_e_mail);
        $stmt->execute();
        $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -105,10 +105,10 @@ class UserDAO
    function ChangeEmail($username,$new_e_mail)
    {
 
-     $query="UPDATE Volunteer SET Email='$new_e_mail' WHERE username='$username'";
+     $query="UPDATE volunteer SET email='$new_e_mail' WHERE username='$username'";
      $stmt = $this->conn->prepare($query);
      $stmt->bindValue(':username', $username);
-     $stmt->bindValue(':Email', $new_e_mail);
+     $stmt->bindValue(':email', $new_e_mail);
      $stmt->execute();
 
 
@@ -117,7 +117,7 @@ class UserDAO
    function DeleteUser($username)
    {
 
-       $query="DELETE FROM Volunteer WHERE username='$username'";
+       $query="DELETE FROM volunteer WHERE username='$username'";
        $stmt = $this->conn->prepare($query);
        $stmt->bindValue(':username', $username);
 
@@ -128,7 +128,7 @@ class UserDAO
      function GetNewEmail($username)
      {
 
-         $query="SELECT Email FROM Volunteer WHERE username='$username'";
+         $query="SELECT email FROM volunteer WHERE username='$username'";
          $stmt = $this->conn->prepare($query);
          $stmt->bindValue(':username', $username);
 
@@ -145,10 +145,10 @@ class UserDAO
 
        $check=true;
 
-       $query = "SELECT COUNT(Email) AS num FROM Volunteer WHERE Email = '$recovery_e_mail'";
+       $query = "SELECT COUNT(email) AS num FROM volunteer WHERE email = '$recovery_e_mail'";
 
        $stmt = $this->conn->prepare($query);
-       $stmt->bindValue(':Email', $recovery_e_mail);
+       $stmt->bindValue(':email', $recovery_e_mail);
        $stmt->execute();
        $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -199,11 +199,11 @@ class UserDAO
       //encrypts password
       $passwordHash = password_hash($new_pass, PASSWORD_BCRYPT);
 
-      $query = "UPDATE Volunteer SET password='$passwordHash' WHERE Email='$email'";
+      $query = "UPDATE volunteer SET password='$passwordHash' WHERE email='$email'";
       $stmt = $this->conn->prepare($query);
 
       $stmt->bindValue(':password', $passwordHash);
-      $stmt->bindValue(':Email', $email);
+      $stmt->bindValue(':email', $email);
 
       $stmt->execute();
     }
@@ -211,10 +211,10 @@ class UserDAO
     function DB_RemoveUsedToken($email)
     {
       //deletes token for user by mathing his address to the token's one
-      $query="DELETE FROM password_resets WHERE Email='$email'";
+      $query="DELETE FROM password_resets WHERE email='$email'";
       $stmt = $this->conn->prepare($query);
 
-      $stmt->bindValue(':Email', $email);
+      $stmt->bindValue(':email', $email);
       $stmt->execute();
     }
 }
