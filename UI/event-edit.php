@@ -1,5 +1,5 @@
 <?php
-
+include('../Logic/CMS_edit_Service.php'); // Includes Login Script
 
 ?>
 <!DOCTYPE html>
@@ -33,16 +33,16 @@
       <p class="page_title">Event categories</p>
       <form action="" method="post">
       <input type="radio" id="event-cms-radio" name="event_cms_select"
-      <?php if (isset($event_cms_all)) $event_cms="All";?>
+      <?php if (isset($event_cms_select)) $event_cms="All";?>
        value="All"/><label class="cms_radio_label">All</label>
       <input type="radio" id="event-cms-radio" name="event_cms_select"
-      <?php if (isset($event_cms_food)) $event_cms="Food";?>
+      <?php if (isset($event_cms_select)) $event_cms="Food";?>
       value="Food"/><label class="cms_radio_label">Food</label>
       <input type="radio" id="event-cms-radio" name="event_cms_select"
-      <?php if (isset($event_cms_jazz)) $event_cms="Jazz";?>
+      <?php if (isset($event_cms_select)) $event_cms="Jazz";?>
       value="Jazz"/><label class="cms_radio_label">Jazz</label>
       <input type="radio" id="event-cms-radio" name="event_cms_select"
-      <?php if (isset($event_cms_dance))$event_cms="Dance";?>
+      <?php if (isset($event_cms_select)) $event_cms="Dance";?>
        value="Dance"/><label class="cms_radio_label">Dance</label>
 
            <!--javascript that unselects radio buttons on webpage since radio button can't do it by deffault-->
@@ -64,6 +64,14 @@
 
            }
             </script>
+            <form action="" method="post">
+              <select id="events" name="cms_select_event" multiple>
+                <?php if(isset($_SESSION["Food"]))
+                foreach($_SESSION["Food"] as $result["Name"])
+                echo"<option value="'food'">text</option>"; ?>
+              </select><br><br>
+            <input type="submit">
+          </form>
     <?php if (isset($message))//displays error message to user
      {
       echo '<label class="text-warning">'.$message.'</label>'.'<br><br>';
