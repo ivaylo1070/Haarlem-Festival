@@ -329,6 +329,7 @@ article{
 }
 .cms_label
 {
+  color: #cc6011;
   font-weight: bold;
   font-size:13px;
   text-decoration: underline;
@@ -351,7 +352,7 @@ article{
   color: #ff0000;
   font-size:13px;
 }
-#event-cms-radio
+.cms_radio_label
 {
   color: #cc6011;
   font-size:13px;
