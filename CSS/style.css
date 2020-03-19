@@ -351,6 +351,12 @@ article{
   color: #ff0000;
   font-size:13px;
 }
+#event-cms-radio
+{
+  color: #cc6011;
+  font-size:13px;
+  margin:50px auto;
+}
 
 /******* header **************/
 
