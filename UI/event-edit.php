@@ -45,11 +45,10 @@
       <?php if (isset($event_cms_dance))$event_cms="Dance";?>
        value="Dance"/><label class="cms_radio_label">Dance</label>
 
-
            <!--javascript that unselects radio buttons on webpage since radio button can't do it by deffault-->
            <script>
            //takes the html element's name
-           var myRadios = document.getElementsByName('subscribe');
+           var myRadios = document.getElementsByName('event_cms_select');
            var setCheck;
            var x = 0;
            for(x = 0; x < myRadios.length; x++){
