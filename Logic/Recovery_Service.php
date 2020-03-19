@@ -101,7 +101,7 @@ if(isset($_POST['token']))
         // calls method from logic layer to forward to DB layer to delete token in database so recovery can be used again
         $user_service->RemoveTokenLogic($email);
 
-        header('location: ../index.php');
+        header('location: lgn_cms.php');
       }
       catch(Exception $e)//cathes error from previous layer and stores it session
       {
