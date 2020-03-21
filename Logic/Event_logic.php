@@ -2,6 +2,7 @@
 
 include(realpath(dirname(__FILE__) . '/../DAL') . "/CMS_DAO.php"); //includes User_Dao script
 
+
 class Event_logic
 {
   private $DB_cms_conn;

@@ -2,9 +2,8 @@
 
 session_start();
 
-$cms_service = new Event_logic();
-
 include_once("Event_logic.php");
+$cms_service = new Event_logic();
 
 if(isset($_POST["event_cms_select"]))
 {

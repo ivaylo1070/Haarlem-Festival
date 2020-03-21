@@ -1,7 +1,7 @@
 <?php
 require_once('../Model/config.php');//calls Config.php script
 
-class UserDAO
+class CMS_DAO
 {
   //database connection variable that is used to store the connection to be used within the entire class
   private $conn;
@@ -36,7 +36,7 @@ class UserDAO
     //returns results array back to logic layer
     return $results;
   }
-  
+
   function DB_GetAllJazzEvents()
   {
     $query = "SELECT * FROM Jazz";
