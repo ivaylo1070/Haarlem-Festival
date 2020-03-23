@@ -14,7 +14,7 @@
 </head>
 <body>
 
-	<?php require("UI/header.php")?>
+	<?php require("UI/header.php"); ?>
 
  <h3>A beautiful historic city center</h3>
  <p class="introduction">

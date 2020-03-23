@@ -1,9 +1,12 @@
 <?php
 //defines set of all the constants needed to make connection to the database
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'hfitteam4_user');
+define('DB_SERVER', 'localhost');//"usermanagement");
+/*define('DB_USERNAME', 'hfitteam4_user');
 define('DB_PASSWORD', 'b6YMJTmc');
-define('DB_NAME', 'hfitteam4_db');
+define('DB_NAME', 'hfitteam4_db');*/
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_NAME', 'usermanagement');
 
 // class that is used to make connection to database via singleton pattern
 class Config

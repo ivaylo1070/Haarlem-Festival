@@ -1,32 +1,20 @@
 <?php
-
+//require_once("../Model/Dal.php");
+require_once('config.php');//
  class restaurant_dal 
 {
 
-    private static $_instance=null;  
-    private $connection=null;
+         private $connection;
 
-    private function __construct() {
-      //$this->connection = mysqli_connect("localhost","hfitteam4_user","b6YMJTmc","hfitteam4_db");
-      $this->connection = mysqli_connect("localhost","root","","usermanagement");
-      if (mysqli_connect_errno()) {
-      echo "Failed to connect to MySQL: " . mysqli_connect_error();
-      exit();
-       }
-    }
-
-    public static function getInstance() 
-    {
-      if(!self::$_instance) { // If no instance then make one
-        self::$_instance = new restaurant_dal(); //new self();
-      }
-      return self::$_instance;
-    }
-
-
+          function __construct()
+          {
+            //creates instance and establishes single connection for the database
+            $instance = Config::getInstance();
+            $this->connection = $instance->getConnection();
+          }
        public function getAllRestaurants()
         {        
-          /*  $result = $this->connection->query("SELECT id, Name, Address, OpeningTime, Closingtime, Stars, Seats, Price, FoodType ,image From Restaraunt;");
+            $result = $this->connection->query("SELECT id, Name, Address, OpeningTime, Closingtime, Stars, Seats, Price, FoodType ,image From Restaraunt;");
             if (!$result)
             {
                 throw new Exception("MySQL Error: '$error'");
@@ -40,8 +28,7 @@
                  $Restaurants[]=$row;
                 }
                 return $Restaurants;
-            }*/
-            echo "hiiiiiiiii";
+            }
         }
           // all restuarants that match given search query 
         public function getRestaurantByFoodType($query) {
@@ -82,7 +69,4 @@
             }
             
         }
-
-
-
 }
