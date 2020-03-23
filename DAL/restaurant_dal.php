@@ -3,9 +3,7 @@
 require_once('config.php');//
  class restaurant_dal 
 {
-
          private $connection;
-
           function __construct()
           {
             //creates instance and establishes single connection for the database
