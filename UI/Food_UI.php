@@ -1,12 +1,20 @@
+<?php
+ob_start(); 
+session_start();
+require("header.php"); // Includes reservation  Script
+?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <link rel="stylesheet" href="../css/style.css">
+ <head>
+    <meta name="description" content="make online reservation for eating outside via our reservation system ">
+    <meta name="keywords" content="resrvation ,dinner outside , eating , European cuisine , dutch food , french food">
+    <link href="style/cms_login.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../CSS/style.css" type="text/css">
+    <title>Haarlem festival</title>
+  </head>
 
-  <?php require("header.php")?>
-</head>
 <body>
- <form action="" method="GET">
+    <form action="" method="GET" background-color="red">
       <label class="checkbox-inline">
       <input type="checkbox" name="type" value="European" id="myCheck" >European
       </label>
@@ -18,42 +26,24 @@
       </label>
         <input type="submit" name="type" value="Filter food type">
     </form>
+    <?php include('../Logic/food_service.php');
+      if(isset($_POST['reserve']))
+      {
+            $_SESSION["ProdctID"] =$_POST['ProdctID'] ;
+            $_SESSION["Menuprice"]=$_POST['Menuprice'] ;
+            $_SESSION["RestoName"] =$_POST['RestoName'] ;
+            $_SESSION["RestoAddress"]=$_POST['RestoAddress'] ;
+            $_SESSION["nbrOfSeats"]=$_POST['nbrOfSeats'] ;
+            header('Location: Resto_reservation.php');
+      }
+
+       ob_end_flush();
+    ?>
 
 </body>
+    <footer>
+      <h2>@HAARLEMFESTIVAL</h2>
+      <p>Facebook</p>
+    </footer>
 
-</html> 
-<?php
-   include(realpath(dirname(__FILE__) . '/../DAL') . "/restaurant_dal.php");
-   //include('../DAL/restaurant_dal.php');
-
-   $dal = new restaurant_dal();
-   $datas=array();
-   $datas= $dal->getAllRestaurants();
-
-     /*  $a=$_GET['type'];
-        $dal = Dal::getInstance();
-        $datas=array();
-        if($a=='All' || empty($a))
-        {
-          $datas= $dal-> getAllRestaurants();
-            echo   "<section class=\"flex-container\">";
-             foreach ($datas as $data) 
-             {
-               DisplayDataInFormattedHtml4($data['image'],$data['Name'],$data['Address'],$data['OpeningTime'],$data['Closingtime'],$data['Stars'],$data['Price'],$data['FoodType'],$data['id']);
-             }
-              echo "</section>";
-        }
-        else
-         {
-          $datas = $dal->getRestaurantByFoodType($a);
-           echo   "<section class=\"flex-container\">";
-             foreach ($datas as $data) 
-             {
-               DisplayDataInFormattedHtml4($data['image'],$data['Name'],$data['Address'],$data['OpeningTime'],$data['Closingtime'],$data['Stars'],$data['Price'],$data['FoodType'],$data['id']);
-             }
-              echo "</section>";
-          }*/
-
-
-
-?>
+  </html>
