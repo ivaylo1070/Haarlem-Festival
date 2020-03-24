@@ -70,11 +70,11 @@ include('../Logic/CMS_edit_Service.php'); // Includes Login Script
                 foreach($_SESSION["Food"] as $result["Name"])
                 echo"<option value=food>".$result["Name"]."</option>"; ?>
                 <?php if(isset($_SESSION["Jazz"]))
-                foreach($_SESSION["Food"] as $result["Name"])
-                echo"<option value=food>".$result["Name"]."</option>"; ?>
+                foreach($_SESSION["Jazz"] as $result["Name"])
+                echo"<option value=jazz>".$result["Name"]."</option>"; ?>
                 <?php if(isset($_SESSION["Dance"]))
-                foreach($_SESSION["Food"] as $result["Name"])
-                echo"<option value=food>".$result["Name"]."</option>"; ?>
+                foreach($_SESSION["Dance"] as $result["Name"])
+                echo"<option value=dance>".$result["Name"]."</option>"; ?>
 
                 <?php
                 if(isset($_SESSION["Dance"]))
@@ -82,9 +82,9 @@ include('../Logic/CMS_edit_Service.php'); // Includes Login Script
                 echo"<option value=food>".$result["Name"]."</option>";
 
                 else if(isset($_SESSION["Jazz"]))
-                foreach($_SESSION["Food"] as $result["Name"])
+                foreach($_SESSION["Jazz"] as $result["Name"])
                 echo"<option value=food>".$result["Name"]."</option>";
-                
+
                 else if(isset($_SESSION["Food"]))
                 foreach($_SESSION["Food"] as $result["Name"])
                 echo"<option value=food>".$result["Name"]."</option>"; ?>
