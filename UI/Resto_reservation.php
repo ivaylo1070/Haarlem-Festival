@@ -20,10 +20,10 @@
               echo "<h2>". $_SESSION["RestoAddress"]." </h2>";
               ?>
     	</p>
-    	<p style="color:red;">
+    	<p >
 			 Note : a reservation fee of 10 eur per person will be charged when a reservation is made on haarlem festival website
 			 this fee will be deducted from the final check on visiting the restaurant 
-			 <br>* reservation is mandatory
+			 <br> <span style="color:red;">* reservation is mandatory</span>
 		</p>
 	    <form action="test.php" method="GET">
 
