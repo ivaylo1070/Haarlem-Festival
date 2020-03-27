@@ -66,9 +66,9 @@ include('../Logic/CMS_edit_Service.php'); // Includes Login Script
             </script>
             <form action="" method="post">
               <select id="events" name="cms_select_event" multiple>
-                <?php if(isset($_SESSION["Food"]))
+                <?php if(isset($_SESSION["Food"])&&$event_cms=="Food")
                 foreach($_SESSION["Food"] as $result["Name"])
-                echo"<option value=food>".$result["Name"]."</option>"; ?>
+                echo"<option value=\"food\">".$result->GetName()."</option>"; ?>
                 <?php if(isset($_SESSION["Jazz"]))
                 foreach($_SESSION["Jazz"] as $result["Name"])
                 echo"<option value=jazz>".$result["Name"]."</option>"; ?>

@@ -1,8 +1,9 @@
 <?php
 
 include(realpath(dirname(__FILE__) . '/../DAL') . "/User_DAO.php"); //includes User_Dao script
+include("../Model/interfaces.php");
 
-class User_logic
+class User_logic implements Iuser
 {
   //variable used to store the access to the database class into this entire class
   private $DB_user_conn;
