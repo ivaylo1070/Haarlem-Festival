@@ -43,7 +43,7 @@ include('../Logic/CMS_edit_Service.php'); // Includes Login Script
       value="Jazz"/><label class="cms_radio_label">Jazz</label>
       <input type="radio" id="event-cms-radio" name="event_cms_select"
       <?php if (isset($event_cms_select)) $event_cms="Dance";?>
-       value="Dance"/><label class="cms_radio_label">Dance</label>
+       value="Dance"/><label class="cms_radio_label">Dance</label><br><br>
 
            <!--javascript that unselects radio buttons on webpage since radio button can't do it by deffault-->
            <script>

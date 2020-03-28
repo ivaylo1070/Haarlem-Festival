@@ -11,8 +11,8 @@ $user_service = new User_logic(); //creates User_logic variable in order to acce
 if (isset($_POST["login"]))
 {
   //strores username and password typed by user into variables
-  $username = $_POST["username"];
-  $password= $_POST["password"];
+  $username = htmlspecialchars($_POST["username"]);
+  $password= htmlspecialchars($_POST["password"]);
   //if these variables are empty an error message is shown to user
   if (empty($username) || empty($password))
   {

@@ -38,7 +38,15 @@ class Event_logic
 
       return $events;
   }
+  function DisplayAllFoodEvents()
+  {
+      $events = GetAllFoodEvents();
 
+      foreach($events as $event)
+      {
+        
+      }
+  }
   function GetAllDanceEvents()
   {
 
