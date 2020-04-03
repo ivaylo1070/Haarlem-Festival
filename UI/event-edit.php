@@ -34,7 +34,7 @@ include('../Logic/CMS_edit_Service.php'); // Includes Login Script
       <form action="" method="post">
       <input type="radio" id="event-cms-radio" name="event_cms_select"
       <?php if (isset($event_cms_select)) $event_cms="All";?>
-       value="All"/><label class="cms_radio_label">All</label>
+       value="All" checked="checked"/><label class="cms_radio_label">All</label>
       <input type="radio" id="event-cms-radio" name="event_cms_select"
       <?php if (isset($event_cms_select)) $event_cms="Food";?>
       value="Food"/><label class="cms_radio_label">Food</label>
@@ -61,36 +61,13 @@ include('../Logic/CMS_edit_Service.php'); // Includes Login Script
                  setCheck = null;
                }
              };
-
            }
             </script>
-            <form action="" method="post">
-              <select id="events" name="cms_select_event" multiple>
-                <?php if(isset($_SESSION["Food"])&&$event_cms=="Food")
-                foreach($_SESSION["Food"] as $result["Name"])
-                echo"<option value=\"food\">".$result->GetName()."</option>"; ?>
-                <?php if(isset($_SESSION["Jazz"]))
-                foreach($_SESSION["Jazz"] as $result["Name"])
-                echo"<option value=jazz>".$result["Name"]."</option>"; ?>
-                <?php if(isset($_SESSION["Dance"]))
-                foreach($_SESSION["Dance"] as $result["Name"])
-                echo"<option value=dance>".$result["Name"]."</option>"; ?>
 
-                <?php
-                if(isset($_SESSION["Dance"]))
-                foreach($_SESSION["Food"] as $result["Name"])
-                echo"<option value=food>".$result["Name"]."</option>";
+        <select class="listView" id="simple_listView" multiple>
+          <?php echo"<option></option>"; ?>
+        </select>
 
-                else if(isset($_SESSION["Jazz"]))
-                foreach($_SESSION["Jazz"] as $result["Name"])
-                echo"<option value=food>".$result["Name"]."</option>";
-
-                else if(isset($_SESSION["Food"]))
-                foreach($_SESSION["Food"] as $result["Name"])
-                echo"<option value=food>".$result["Name"]."</option>"; ?>
-              </select><br><br>
-            <input type="submit">
-          </form>
     <?php if (isset($message))//displays error message to user
      {
       echo '<label class="text-warning">'.$message.'</label>'.'<br><br>';

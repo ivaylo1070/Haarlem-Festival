@@ -1,30 +1,27 @@
 <?php
-
-class Food_Event
+class Jazz_Event
 {
   private $id;
   private $name;
   private $address;
   private $opening_time;
   private $closing_time;
-  private $stars;
   private $seats;
   private $price;
-  private $food_type;
   private $image;
+  private $band;
 
-  function __construct($ID,$Name,$Address,$Opening_time,$Closing_time,$Stars,$Seats,$Price,$Food_type,$Image)
+  function __construct($ID,$Name,$Address,$Opening_time,$Closing_time,$Seats,$Price,$Image,$Band)
   {
     $this->id=$ID;
     $this->name=$Name;
     $this->address=$Address;
     $this->opening_time=$Opening_time;
     $this->closing_time=$Closing_time;
-    $this->stars=$Stars;
     $this->seats=$Seats;
     $this->price=$Price;
-    $this->food_type=$Food_type;
     $this->image=$Image;
+    $this->band=$Band;
   }
   function SetName($Name)
   {
@@ -58,14 +55,6 @@ class Food_Event
   {
     return $closing_time;
   }
-  function SetStars($Stars)
-  {
-    $this->stars=$Stars;
-  }
-  function GetStars()
-  {
-    return $stars;
-  }
   function SetSeats($Seats)
   {
     $this->seats=$Seats;
@@ -82,14 +71,6 @@ class Food_Event
   {
     return $price;
   }
-  function SetFoodType($Food_type)
-  {
-    $this->food_type=$Food_type;
-  }
-  function GetFoodType()
-  {
-    return $food_type;
-  }
   function SetImage($Image)
   {
     $this->image=$image;
@@ -98,6 +79,13 @@ class Food_Event
   {
     return $image;
   }
+  function SetBand($Band)
+  {
+    $this->band=$Band;
+  }
+  function GetBand()
+  {
+    return $band;
+  }
 }
-
-?>
+ ?>

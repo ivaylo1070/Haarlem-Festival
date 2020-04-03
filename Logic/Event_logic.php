@@ -44,7 +44,7 @@ class Event_logic
 
       foreach($events as $event)
       {
-        
+
       }
   }
   function GetAllDanceEvents()
@@ -61,7 +61,7 @@ class Event_logic
 
       return $result;
   }
-
+  
 
 }
  ?>
