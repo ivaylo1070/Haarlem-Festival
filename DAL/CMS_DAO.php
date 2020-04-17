@@ -1,5 +1,5 @@
 <?php
-require_once('config.php');//calls Config.php script
+require_once('Config.php');//calls Config.php script
 
 class CMS_DAO
 {

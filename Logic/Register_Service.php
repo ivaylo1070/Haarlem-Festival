@@ -10,11 +10,11 @@ $user_service = new User_logic();
 if (isset($_POST["sign_Up"]))
 {
   //assigns text box written values to variables
-  $username = $_POST["username"];
-  $password= $_POST["password"];
-  $new_e_mail= $_POST["e-mail"];
-  $password_repeat= $_POST["confirm_password"];
-  $phone_number=$_POST["phone_number"];
+  $username = htmlspecialchars($_POST["username"]);
+  $password= htmlspecialchars($_POST["password"]);
+  $new_e_mail= htmlspecialchars($_POST["e-mail"]);
+  $password_repeat= htmlspecialchars($_POST["confirm_password"]);
+  $phone_number=htmlspecialchars($_POST["phone_number"]);
 //if no input shows error message
   if (empty($username) || empty($password) || empty($new_e_mail) || empty($password_repeat))
   {

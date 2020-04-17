@@ -10,7 +10,7 @@ $user_service = new User_logic(); //creates User_logic variable in order to acce
 if(isset($_POST["recover"]))
 {
   //stores insrted e-mail in variable
-  $recovery_e_mail=$_POST["r_e-mail"];
+  $recovery_e_mail=htmlspecialchars($_POST["r_e-mail"]);
   // shows error for not input by user
   if (empty($recovery_e_mail))
   {
@@ -49,7 +49,7 @@ if(isset($_POST["recover"]))
 //if button with name token on pending_view page is pressed then following script is executed
 if(isset($_POST['token']))
 {
-  $token = $_POST['token_value']; // saves input data in variable
+  $token = htmlspecialchars($_POST['token_value']); // saves input data in variable
 
   try
   {
@@ -79,8 +79,8 @@ if(isset($_POST['token']))
   if (isset($_POST['new_password']))
   {
     // saves user input from textboxes into variables
-    $new_pass = $_POST['new_pass'];
-    $new_pass_c = $_POST['new_pass_c'];
+    $new_pass = htmlspecialchars($_POST['new_pass']);
+    $new_pass_c = htmlspecialchars($_POST['new_pass_c']);
     //gets recovery e-mail from superglobal and stores it
     $email=$_SESSION['e_mail'];
 

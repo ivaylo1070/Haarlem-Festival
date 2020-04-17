@@ -4,15 +4,18 @@ session_start();
 
 include_once("Event_logic.php");
 $cms_service = new Event_logic();
+$listView_food;
 
 if(isset($_POST["event_cms_select"]))
 {
   $event_type=$event_cms;
-
+  $food_events=$cms_service->GetAllFoodEvents();
+  $_SESSION["food"]=$food_events;
+  
   if($event_type=="Food")
   {
-      $results_food=$cms_service->GetAllFoodEvents();
-      $_SESSION["food"]=$results_food;
+      $food_events=$cms_service->GetAllFoodEvents();
+      $_SESSION["food"]=$food_events;
   }
   else if($event_type=="Jazz")
   {
