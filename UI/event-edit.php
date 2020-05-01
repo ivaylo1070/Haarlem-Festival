@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include('../Logic/CMS_edit_Service.php'); // Includes Login Script
 
 ?>
@@ -33,16 +35,16 @@ include('../Logic/CMS_edit_Service.php'); // Includes Login Script
       <p class="page_title">Event categories</p>
       <form action="" method="post">
       <input type="radio" id="event-cms-radio" name="event_cms_select"
-      <?php if (isset($event_cms_select)) $event_cms="All";?>
+      <?php if (isset($_POST["event_cms_select"])) $event_cms_select="All";?>
        value="All" checked="checked"/><label class="cms_radio_label">All</label>
       <input type="radio" id="event-cms-radio" name="event_cms_select"
-      <?php if (isset($event_cms_select)) $event_cms="Food";?>
+      <?php if (isset($_POST["event_cms_select"])) $event_cms_select="Food";?>
       value="Food"/><label class="cms_radio_label">Food</label>
       <input type="radio" id="event-cms-radio" name="event_cms_select"
-      <?php if (isset($event_cms_select)) $event_cms="Jazz";?>
+      <?php if (isset($_POST["event_cms_select"])) $event_cms_select="Jazz";?>
       value="Jazz"/><label class="cms_radio_label">Jazz</label>
       <input type="radio" id="event-cms-radio" name="event_cms_select"
-      <?php if (isset($event_cms_select)) $event_cms="Dance";?>
+      <?php if (isset($_POST["event_cms_select"])) $event_cms_select="Dance";?>
        value="Dance"/><label class="cms_radio_label">Dance</label><br><br>
 
            <!--javascript that unselects radio buttons on webpage since radio button can't do it by deffault-->
@@ -65,7 +67,14 @@ include('../Logic/CMS_edit_Service.php'); // Includes Login Script
             </script>
 
         <select class="listView" id="simple_listView" multiple>
-          <?php echo"<option></option>"; ?>
+          <?php if(isset($_SESSION["food"]))
+          {
+            foreach($_SESSION["food"] as $event)
+          {
+            echo"<option>".$event->GetName()."</option>";
+          }
+        }
+          ?>
         </select>
 
     <?php if (isset($message))//displays error message to user

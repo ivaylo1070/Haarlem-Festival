@@ -3,7 +3,6 @@
 class Dance_Event
 {
 private $id;
-private $name;
 private $address;
 private $opening_time;
 private $closing_time;
@@ -12,10 +11,9 @@ private $price;
 private $image;
 private $session;
 
-function __construct($ID,$Name,$Address,$Opening_time,$Closing_time,$Seats,$Price,$Image,$Session)
+function __construct($ID,$Address,$Opening_time,$Closing_time,$Seats,$Price,$Image,$Session)
 {
   $this->id=$ID;
-  $this->name=$Name;
   $this->address=$Address;
   $this->opening_time=$Opening_time;
   $this->closing_time=$Closing_time;
@@ -23,14 +21,6 @@ function __construct($ID,$Name,$Address,$Opening_time,$Closing_time,$Seats,$Pric
   $this->price=$Price;
   $this->image=$Image;
   $this->session=$Session;
-}
-function SetName($Name)
-{
-  $this->name=$Name;
-}
-function GetName()
-{
-  return $name;
 }
 function SetAddress($Address)
 {

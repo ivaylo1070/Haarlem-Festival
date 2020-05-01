@@ -2,7 +2,6 @@
 class Jazz_Event
 {
   private $id;
-  private $name;
   private $address;
   private $opening_time;
   private $closing_time;
@@ -11,10 +10,9 @@ class Jazz_Event
   private $image;
   private $band;
 
-  function __construct($ID,$Name,$Address,$Opening_time,$Closing_time,$Seats,$Price,$Image,$Band)
+  function __construct($ID,$Address,$Opening_time,$Closing_time,$Seats,$Price,$Image,$Band)
   {
     $this->id=$ID;
-    $this->name=$Name;
     $this->address=$Address;
     $this->opening_time=$Opening_time;
     $this->closing_time=$Closing_time;
@@ -22,14 +20,6 @@ class Jazz_Event
     $this->price=$Price;
     $this->image=$Image;
     $this->band=$Band;
-  }
-  function SetName($Name)
-  {
-    $this->name=$Name;
-  }
-  function GetName()
-  {
-    return $name;
   }
   function SetAddress($Address)
   {
