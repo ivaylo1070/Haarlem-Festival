@@ -41,7 +41,7 @@
 				  <option value="6.30">6.30</option>
 				  <option value="8.30">8.30</option>
 				</select> <br>	
-				Number Of Adults <select id="radults" name="adults"> 
+				Number Of Adults <select id="radults" name="adults" onchange="myFunction();"> 
 				  <option value="1">1</option>
 				  <option value="2">2</option>
 				  <option value="3">3</option>
