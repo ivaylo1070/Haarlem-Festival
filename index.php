@@ -14,8 +14,8 @@ the city that has everything. From hidden courtyards from bygone times to trendy
        <section class="flex-container-HaarlemIndex">
 
            <article class="article1">
-               <img src="Img/Fris.png" alt="product 1"  title ="image of rubiks  cub"/>
-        <h3> restaurant fris</h3>
+               <img src="Img/Dance.jps" alt="product 1"  title ="image of rubiks  cub"/>
+        <h3> Haarlem Dance</h3>
        <p>
         type : french,dutch, german
         location : holland
@@ -27,7 +27,7 @@ the city that has everything. From hidden courtyards from bygone times to trendy
 
            <article class="article1">
                <img src="Img/Fris.png" alt="product 2" title ="image of castle game"/>
-       <h3> restaurant fris</h3>
+       <h3> Haarelm Jazz</h3>
        <p>
         type : french,dutch, german
         location : holland
@@ -39,7 +39,7 @@ the city that has everything. From hidden courtyards from bygone times to trendy
 
            <article class="article1">
                <img src="Img/Fris.png" alt=" product 3"  title ="image of super mario"/>
-       <h3> restaurant fris</h3>
+       <h3> Haarlem History</h3>
        <p>
         type : french,dutch, german
         location : holland
@@ -51,7 +51,7 @@ the city that has everything. From hidden courtyards from bygone times to trendy
 
            <article class="article1">
                <img src="Img/Fris.png" alt=" product 4"  title ="image of poker"/>
-       <h3> restaurant fris</h3>
+       <h3> Haarlem Food</h3>
        <p>
         type : french,dutch, german
         location : holland
