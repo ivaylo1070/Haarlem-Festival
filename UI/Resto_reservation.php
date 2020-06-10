@@ -1,7 +1,6 @@
 <?php
     echo "<link rel='stylesheet' type='text/css' href='css/style.css' />";
     session_start();
-    //require("header.php"); 
      require_once 'Display.php';
       $id= $_SESSION["ProdctID"] ;// send the restaurant id in session 
 	  $price=$_SESSION["Menuprice"];
