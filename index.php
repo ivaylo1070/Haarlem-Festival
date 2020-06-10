@@ -38,7 +38,7 @@ the city that has everything. From hidden courtyards from bygone times to trendy
            </article>
 
            <article class="article1">
-               <img src="Img/Fris.png" alt=" product 3"  title ="image of super mario"/>
+               <img src="Img/Dance.jpg" alt=" product 3"  title ="image of super mario"/>
        <h3> Haarlem History</h3>
        <p>
         type : french,dutch, german
@@ -50,7 +50,7 @@ the city that has everything. From hidden courtyards from bygone times to trendy
            </article>
 
            <article class="article1">
-               <img src="Img/Fris.png" alt=" product 4"  title ="image of poker"/>
+               <img src="Img/h.jpg" alt=" product 4"  title ="image of poker"/>
        <h3> Haarlem Food</h3>
        <p>
         type : french,dutch, german
