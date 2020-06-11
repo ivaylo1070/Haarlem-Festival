@@ -2,6 +2,8 @@
 ob_start(); 
 session_start();
 require("header.php"); // Includes reservation  Script
+
+$link_address = "";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +36,7 @@ require("header.php"); // Includes reservation  Script
             $_SESSION["RestoName"] =$_POST['RestoName'] ;
             $_SESSION["RestoAddress"]=$_POST['RestoAddress'] ;
             $_SESSION["nbrOfSeats"]=$_POST['nbrOfSeats'] ;
-            header('Location: Resto_reservation.php');
+            header('Location: UI/Resto_reservation.php');
       }
 
        ob_end_flush();
