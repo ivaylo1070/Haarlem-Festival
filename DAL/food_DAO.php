@@ -7,7 +7,6 @@ class food_DAO
      private $connection;
       function __construct()
       {
-        //creates instance and establishes single connection for the database
         $instance = Config::getInstance();
         $this->connection = $instance->getConnection();
       }

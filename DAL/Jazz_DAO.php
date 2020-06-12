@@ -1,5 +1,4 @@
 <?php
-
 class Jazz_DAO{
 
 	private	$conn;

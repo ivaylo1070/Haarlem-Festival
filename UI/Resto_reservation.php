@@ -1,13 +1,12 @@
 <?php
     echo "<link rel='stylesheet' type='text/css' href='css/style.css' />";
     session_start();
-     require_once 'Display.php';
+    require_once 'Display.php';
       $RestrntID= $_SESSION["ProdctID"] ;// send the restaurant id in session 
 	  $price=$_SESSION["Menuprice"];
 
 	if(isset($_POST['AddToCart']))
      {
-      //print_r($_POST['ProdctID']);
       $count=0;
       if (isset($_SESSION['cart_array'])) {
         $itemsId= array_column($_SESSION['cart_array'], 'ProdctID');
@@ -22,9 +21,6 @@
                   $count= count($_SESSION['cart_array']);
                   $item_array= array('ProdctID'=>$RestrntID) ;
                   $_SESSION['cart_array'][$count]=$item_array;
-                  //print_r($_SESSION['cart']);
-                 // echo   $count ."items ";
-                  //https://www.youtube.com/watch?v=eAK8uYtNTy4   item count
               }
       }
       else{
@@ -99,6 +95,7 @@
 				Total  <input type="text" id="total" value="0" disabled> <br>
 				<input type="hidden" value = "<?php $_SESSION["ProdctID"] ;?> // send restaurant id" />
 			   <input type="submit" name="AddToCart" value="Add to the cart" />
+			    <button> <a href="pdfreservation.php ">Display your reservation</a> </button> 
 			</section>
 	
 	    </form>
