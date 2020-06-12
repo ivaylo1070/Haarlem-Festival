@@ -2,8 +2,6 @@
 ob_start(); 
 session_start();
 require("header.php"); // Includes reservation  Script
-
-$link_address = "";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +14,7 @@ $link_address = "";
   </head>
 
 <body>
-    <form action="" method="GET" background-color="red">
+    <form action="" method="GET">
       <label class="checkbox-inline">
       <input type="checkbox" name="type" value="European" id="myCheck" >European
       </label>
@@ -26,7 +24,7 @@ $link_address = "";
       <label class="checkbox-inline">
         <input type="checkbox" name="type" value="All" id="myCheck">All
       </label>
-        <input type="submit" name="type" value="Filter food type">
+        <input type="submit" value="Filter food type">
     </form>
     <?php include('../Logic/food_service.php');
       if(isset($_POST['reserve']))
@@ -35,8 +33,9 @@ $link_address = "";
             $_SESSION["Menuprice"]=$_POST['Menuprice'] ;
             $_SESSION["RestoName"] =$_POST['RestoName'] ;
             $_SESSION["RestoAddress"]=$_POST['RestoAddress'] ;
-            $_SESSION["nbrOfSeats"]=$_POST['nbrOfSeats'] ;
-            header('Location: UI/Resto_reservation.php');
+            $_SESSION["nbrOfSeats"]=$_POST['nbrOfSeats'];
+            
+            header('Location: Resto_reservation.php');
       }
 
        ob_end_flush();

@@ -2,10 +2,42 @@
     echo "<link rel='stylesheet' type='text/css' href='css/style.css' />";
     session_start();
      require_once 'Display.php';
-      $id= $_SESSION["ProdctID"] ;// send the restaurant id in session 
+      $RestrntID= $_SESSION["ProdctID"] ;// send the restaurant id in session 
 	  $price=$_SESSION["Menuprice"];
+
+	if(isset($_POST['AddToCart']))
+     {
+      //print_r($_POST['ProdctID']);
+      $count=0;
+      if (isset($_SESSION['cart_array'])) {
+        $itemsId= array_column($_SESSION['cart_array'], 'ProdctID');
+       // print_r($itemsId);
+              if (in_array($RestrntID, $itemsId)) {
+                echo "<script>alert('already in the cart')</script>";
+                $count= count($_SESSION['cart_array']);
+                  echo   $count ."items ";
+
+              }else
+              {
+                  $count= count($_SESSION['cart_array']);
+                  $item_array= array('ProdctID'=>$RestrntID) ;
+                  $_SESSION['cart_array'][$count]=$item_array;
+                  //print_r($_SESSION['cart']);
+                 // echo   $count ."items ";
+                  //https://www.youtube.com/watch?v=eAK8uYtNTy4   item count
+              }
+      }
+      else{
+        $item_array= array('ProdctID'=>$RestrntID) ;
+        $_SESSION['cart_array'][0]=$item_array;
+        print_r($_SESSION['cart_array']);
+
+      }
+     }
 ?>
-<?php ob_start();  ?>
+<?php ob_start(); 
+	 require("header.php"); 
+ ?>
  <!DOCTYPE html>
 <html>
   <head>
@@ -24,7 +56,7 @@
 			 this fee will be deducted from the final check on visiting the restaurant 
 			 <br> <span style="color:red;">* reservation is mandatory</span>
 		</p>
-	    <form action="test.php" method="GET">
+	    <form action="" method="POST">
 
 			    <section class="flex-container-reservation">
 				  <span>Reservation details<span> <br>
@@ -66,8 +98,7 @@
 				</textarea> <bR>
 				Total  <input type="text" id="total" value="0" disabled> <br>
 				<input type="hidden" value = "<?php $_SESSION["ProdctID"] ;?> // send restaurant id" />
-				<input type="submit" value="reserve" />
-			   <input type="submit" value="Add to the cart" />
+			   <input type="submit" name="AddToCart" value="Add to the cart" />
 			</section>
 	
 	    </form>
