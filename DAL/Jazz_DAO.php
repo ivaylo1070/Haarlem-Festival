@@ -24,4 +24,25 @@ class Jazz_DAO{
 							return $data;
 						}
 		}
+public function SaveTransaction($name,$surname)
+		$sql1 = "INSERT INTO customer (name,$surname) VALUES (?, ?)";
+if($stmt = $this->conn->prepare($sql1)){
+	try {
+		$stmt->bind_param("ss", $param_name, $param_surname);
+		$param_name = $name;
+		$param_surname = $surname;
+	} catch (\Exception $e) {
+		echo $e->getMessage();
+	}
+		if($stmt->execute()){
+			$sql2 = "SELECT IDENT_CURRENT('customer')";
+			$id = $this->conn->query($sql2);
+			$sql3 = "INSERT INTO transaction (Id,eventID) VALUES ($id, 4)";
+			$result = $this->conn->query($sql3);
+			return true; // token and email saved to the database
+		} else{
+			return false; // did not save
+		}
+
+}
 	}
