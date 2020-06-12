@@ -9,9 +9,9 @@ private static $instance = null;
 private $conn;
 // assign database conncetion details;
 private $servername = "localhost";
-private $username = "root";
-private $password = "";
-private $dbhname = "haarlem_f";
+private $username = "hfitteam4_user";
+private $password = "b6YMJTmc";
+private $dbhname = "hfitteam4_db";
 
 // prevent a connection from being created outside this class;
 private function __construct(){

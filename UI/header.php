@@ -1,6 +1,13 @@
 
 <?php $link_address = "";
 ?>
+<head>
+	 <meta name="description" content="make online reservation for eating outside via our reservation system ">
+	 <meta name="keywords" content="resrvation ,dinner outside , eating , European cuisine , dutch food , french food">
+	 <link href="style/cms_login.css" rel="stylesheet" type="text/css">
+	 <link rel="stylesheet" href="../CSS/style.css" type="text/css">
+	 <title>Haarlem festival</title>
+ </head>
 <img class="Logoright" src="../Img/logo.png" alt="logo"  title ="logo"/>
 <ul>
 	<li><a href="">EN</a></li>

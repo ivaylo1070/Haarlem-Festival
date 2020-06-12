@@ -24,8 +24,8 @@ class Jazz_DAO{
 							return $data;
 						}
 		}
-public function SaveTransaction($name,$surname)
-		$sql1 = "INSERT INTO customer (name,$surname) VALUES (?, ?)";
+public function SaveTransaction($name,$surname){
+		$sql1 = "INSERT INTO customer (name,surname) VALUES (?, ?)";
 if($stmt = $this->conn->prepare($sql1)){
 	try {
 		$stmt->bind_param("ss", $param_name, $param_surname);
@@ -46,3 +46,4 @@ if($stmt = $this->conn->prepare($sql1)){
 
 }
 	}
+}
