@@ -13,7 +13,7 @@ the city that has everything. From hidden courtyards from bygone times to trendy
 </p>
        <section class="flex-container-HaarlemIndex">
 
-           <article class="article1" style="height:150px" "width:30;">
+          <article class="article1" style="height:150px ;width:30;">
                <img src="Img/Dance.jps" alt="product 1"  title ="image of rubiks  cub"/>
         <h3> Haarlem Dance</h3>
        <p>
