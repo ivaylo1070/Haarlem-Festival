@@ -66,7 +66,7 @@ caption{
 			padding-top: 0px;
 }
 
-.form{
+form{
 	border: 1px solid;
   border-color: #A99678;
 	background-image: url(../Img/jazz1.jpg);
@@ -81,7 +81,7 @@ a{
 </style>
 </head>
 <body>
-	<form class='form' action='index.php' method='post'>
+	<form class='' action='index.php' method='post'>
 		<table class = 'timetable' width = '90%'>
 			<caption>Haarlem Festival Jazz Time Table</caption>
 			<tr>
