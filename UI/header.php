@@ -4,6 +4,7 @@
 <head>
 	 <meta name="description" content="make online reservation for eating outside via our reservation system ">
 	 <meta name="keywords" content="resrvation ,dinner outside , eating , European cuisine , dutch food , french food">
+	 <meta name="viewport" content="width=1280, initial-scale=1" />
 	 <link href="style/cms_login.css" rel="stylesheet" type="text/css">
 	 <link rel="stylesheet" href="../CSS/style.css" type="text/css">
 	 <title>Haarlem festival</title>
@@ -15,7 +16,7 @@
 				?></a></li>
 	<li><a href="<?php echo $link_address;?>/UI/Food_UI.php">Haarlem Food</a></li>
 	<li><a href="<?php echo $link_address;?>/UI/Dance_UI.php">Haarlem Dance</a></li>
-	<li><a href="<?php echo $link_address;?>/UI/JazzLandingPage.php">Haarlem Jazz</a></li>
+	<li><a href="<?php echo $link_address;?>/UI/Jazz_UI.php">Haarlem Jazz</a></li>
 	<li><a href="/index.php">Home</a></li>
 </ul>
 <header class="header">
