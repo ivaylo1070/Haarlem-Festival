@@ -10,9 +10,14 @@ class Food_logic
       {
           $this->conn = new food_DAO();
       }
+      function sayhi()
+      {
+          $this->conn ->sayHi();
+      }
+ 
       function GetAllRestrnt()
       {
-          $results=$this->conn->getAllRestaurants();//getAllRestaurants();
+          $results=$this->conn->GetAllResto();//getAllRestaurants();
           return $results;
       }
       function GetRestrntById($id)

@@ -9,7 +9,7 @@ $datas= $food_service-> GetAllRestrnt();
              echo   "<section class=\"flex-container\">";
              foreach ($datas as $data) 
              {
-               DisplayDataInFormattedHtml4($data['image'],$data['Name'],$data['Address'],$data['OpeningTime'],$data['Closingtime'],$data['Stars'],$data['Price'],$data['FoodType'],$data['ID'],$data['Seats']);
+               DisplayDataInFormattedHtml4($data['image'],$data['Name'],$data['Address'],$data['OpeningTime'],$data['Closingtime'],$data['Stars'],$data['Price'],$data['FoodType'],$data['id'],$data['Seats']);
              }
               echo "</section>";
 ?>
