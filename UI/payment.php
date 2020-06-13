@@ -147,6 +147,7 @@ hr{
 				}
 				$tax = 0.15 * $total_price;
 				$Total = $total_price + $tax;
+				$_SESSION['totalPrice'] = $Total;
 			echo"
 					<tr>
 					<td></td><td></td><td><b></b></td><td></b></td>
@@ -185,25 +186,7 @@ hr{
 	<input class=details type="text" name="confirm_email" value="" placeholder="smith@gmail.com">
 	<span class= 'error'><?php echo $confirm_email_err; ?></span></P>
 
-<hr class ='hrwidth'>
-<h3 class = center>Select a payment method</h3>
-<p class = radio>	<label for="pin">Pin</label>
-<input  type="radio" name="card" value="" checked="checked">
 
-<label for="visa">Visa</label>
-<input  type="radio" name="card" value="">
-
-<label for="amex">Amex</label>
-<input type="radio" name="card" value=""></p>
-<p>	<label class = label  for="">Card Number</label><span class="required">*</span>
-	<input class = details type="text" name="cardNum" value="" placeholder="233 2332 4324 54">
-</P>
-<p>	<label class = label for="">Exiry Date</label><span class="required">*</span>
-	<input class=details type="text" name="exdate" value="" placeholder="25/09/2021">
-</P>
-	 <p><label class = label for="">Security Code</label><span class="required">*</span>
-	<input class = details type="text" name="" value=""placeholder="654">
-</P>
 	</section>
 	<hr class = hrwidth>
 

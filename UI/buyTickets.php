@@ -1,7 +1,7 @@
 <?php
 ob_start();
 require_once '../Logic/MyAutoLoader.php';
-
+require_once 'header.php';
 $Jazz_landing_Page = 'index.php';
 ?>
 <!DOCTYPE html>

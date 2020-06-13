@@ -81,8 +81,8 @@ if(isset($_COOKIE['cart'])){
     $total_price += $value['price'];
   }
 }
-  $tax = 0.15 * $total_price;
-  $Total = $total_price + $tax;
+    $tax = 0.15 * $total_price;
+  	$_SESSION['totalPrice']+= $tax;
   $ticketOwner = $_SESSION['name']. '-'.$_SESSION['surname'].','.$_SESSION['email'];
   $pdf->image('http://localhost/UI/QrGenerator/qrcodegen.php?user='.$ticketOwner,138,34,30,30,"png");
 

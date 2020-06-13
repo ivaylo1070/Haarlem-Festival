@@ -32,10 +32,8 @@ if(isset($_POST['paymentbtn'])){
       $_SESSION['surname'] = $surname;
       $_SESSION['email'] = $email;
       // send transecation to database;
-      echo  "<script type='text/javascript'>
-         if(!alert('Payment Successfull')) document.location = '../UI/pdfInvoice.php';
-      </script>";
-
+      header('Location:../UI/SelectPaymentMethod.php');
+      
       }
 
 }
