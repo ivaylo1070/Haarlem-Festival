@@ -31,9 +31,10 @@ if(isset($_POST['paymentbtn'])){
       $_SESSION['name'] = $name;
       $_SESSION['surname'] = $surname;
       $_SESSION['email'] = $email;
+      
       // send transecation to database;
       header('Location:../UI/SelectPaymentMethod.php');
-      
+
       }
 
 }

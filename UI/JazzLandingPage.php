@@ -16,7 +16,14 @@ $Jazz_landing_Page = 'index.php';
 * {
   box-sizing: border-box;
 }
+.timetableHeading{
+	height: 100px;
+	margin-right: 40px;
+	background-color: #D8D8D8;
+	opacity:0.6;
+	font-size: 30px;
 
+}
 .column {
   padding: 10px;
   height: 300px; /* Should be removed. Only for demonstration */
@@ -25,7 +32,12 @@ $Jazz_landing_Page = 'index.php';
 
 
 }
-
+.timetable{
+	border-spacing: 30px 0px;
+	table-layout: fixed;
+ margin: auto;
+ margin-bottom: 50px;
+}
 caption{
   padding: 15px;
 	font-size: 40px;
@@ -54,7 +66,7 @@ caption{
 			padding-top: 0px;
 }
 
-.form{
+form{
 	border: 1px solid;
   border-color: #A99678;
 	background-image: url(../Img/jazz1.jpg);
@@ -69,7 +81,7 @@ a{
 </style>
 </head>
 <body>
-	<form class='form' action='index.php' method='post'>
+	<form class='' action='index.php' method='post'>
 		<table class = 'timetable' width = '90%'>
 			<caption>Haarlem Festival Jazz Time Table</caption>
 			<tr>
