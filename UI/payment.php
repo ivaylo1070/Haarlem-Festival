@@ -108,7 +108,7 @@ hr{
 		</header>
 		<main class="paymentContent">
 			<div class="content">
-				<img class=logo src="/img/logo.png" alt="">
+				<img class=logo src="/Img/logo.png" alt="">
 			<h2 class = 'headingh2'>Payment Form</h2>
 		<table class='pyamentTable'  width = '100%'>
 			<tr>
