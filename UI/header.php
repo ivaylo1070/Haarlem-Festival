@@ -15,7 +15,7 @@
 				?></a></li>
 	<li><a href="<?php echo $link_address;?>/UI/Food_UI.php">Haarlem Food</a></li>
 	<li><a href="<?php echo $link_address;?>/UI/Dance_UI.php">Haarlem Dance</a></li>
-	<li><a href="<?php echo $link_address;?>/UI/Jazz_UI.php">Haarlem Jazz</a></li>
+	<li><a href="<?php echo $link_address;?>/UI/JazzLandingPage.php">Haarlem Jazz</a></li>
 	<li><a href="/index.php">Home</a></li>
 </ul>
 <header class="header">
