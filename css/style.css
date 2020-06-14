@@ -539,3 +539,18 @@ footer {
 	background:#cc6011;
 	width :100%;
 }
+/********************JazzUI**************************/
+.timetable{
+	border-spacing: 30px 0px;
+	table-layout: fixed;
+ margin: auto;
+ margin-bottom: 50px;
+}
+.timetableHeading{
+	height: 100px;
+	margin-right: 40px;
+	background-color: #D8D8D8;
+	opacity:0.6;
+	font-size: 30px;
+
+}
