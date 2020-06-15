@@ -1,0 +1,677 @@
+
+{
+     margin:0px;
+     padding:0;
+     font-family: "Times New Roman", Times, serif;
+
+}
+body{
+		width:100%;
+}
+p.introduction,h3{
+	margin-top:15px;
+	text-align:center;
+}
+ h3{
+color:#cc6011;
+}
+
+/******* header **************/
+
+.header {
+  padding: 80px;
+  background-image: url("../Img/hi.jpg");
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Logoright {
+	float :left ;
+	height:60px;
+	width:100px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #cc6011;
+  float:right;
+}
+
+img{
+width:100%;
+
+}
+
+li {
+	display: inline-block;
+	width:14em;
+	height:5em;
+	float: right;
+}
+
+li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 30px  30px;
+  text-decoration: none;
+
+}
+
+li a:hover {
+  background-color: #fff;
+  color: #cc6011;
+}
+
+/* need to fix !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.cartIcon {
+  background-image: url("../Img/logo.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/******* the home page **************/
+.flex-container-HaarlemIndex .article1
+{
+	 min-width:23% ;
+     width:23% ;
+     padding-bottom:0px;
+     margin-bottom:10px;
+     max-height:32%;
+	 border-width:2px;
+	 border-style:solid;
+     border-color:#cc6611;
+}
+.flex-container-HaarlemIndex .article1 img
+{
+	  max-width:99% ;
+     width:99% ;
+     margin-bottom:4px;
+     margin-top:4px;
+     height:20%;
+     background-size: contain;
+     background-position: 100% 100%;
+     background-repeat: no-repeat;
+}
+ .flex-container-HaarlemIndex .article1 input {
+     max-width:50% ;
+     width:50% ;
+	 color :#fff;
+	 background-color:#cc6011;
+	 padding: 12px 12px;
+	 margin-top: 50px;
+	 margin-bottom:0px;
+	 margin-left:20% ;
+
+}
+ .flex-container-HaarlemIndex .article1 input:hover {
+	 color :#cc6011;
+	 background-color: #fff;
+	 border:solid 2px #cc6011;
+
+}
+
+
+/**************************Ticket**************************/
+#ticket{
+	border: 1px solid #bdc3c7;
+
+	width: 70em;
+	height:9em;
+	margin: auto;
+	padding:0 0 0 1em;
+	float:up;
+
+	background-color:#c7c7c7;
+}
+
+
+#ticket label button{
+	width:2em;
+	font-size: 0.8em;
+
+}
+#ticket label input{
+	width:3em;
+	font-size: 0.8em;
+
+}
+
+#addtocart{
+
+	width:10em;
+	font-size: 2em;
+	float:right;
+	padding:none;
+	margin:0.3em;
+	background-color:#cc6011;
+	border:0.03em solid;
+	border-radius: 0.3em;
+}
+
+#price{
+		width:40%;
+		font-size: 3em ;
+		font-weight: bold;
+		float:left;
+
+}
+#title{
+	width:60%;
+	font-size: 3em;
+	font-weight: bold;
+	float:left;
+
+}
+#quantity{
+	width:40%;
+
+}
+
+
+#ticket label {
+	display: inline-block;
+	width:20em;
+	height:1.1em;
+	font-size: 2em;
+	float:left;
+
+
+}
+
+#ticket img {
+	width:2em;
+	float:left;
+}
+/********************Sidebar************************/
+
+
+/* Create two columns/boxes that floats next to each other */
+/*aside {
+  float: right;
+  width: 20%;
+  height: 100%;
+  background: #ccc;
+  padding: 1em;
+}*/
+
+
+section {
+	width:100%;
+}*/
+/* please gige this id number or class name not superglobal article it confuses explorer*/
+article{
+	min-height:40em;
+}*/
+/********************CMS*****************************
+#login,.register-form,.recovery-form{
+  font-size: 28px;
+  color: #cc6011;
+  width:60%;
+  margin:50px auto;
+  background-color: #ffff;
+  text-align: center;
+  font: Arial;
+}
+.cms_button {
+  text-align: center;
+  color:#fff;
+  background:#cc6011;
+  border-style: :none;
+  border-color: #cc6011;
+  width: 284px;
+  height: 64px;
+  font-size:13px;
+}
+.cms_button:hover {
+  background-color: #fff;
+  color: #cc6011;
+}
+
+*{
+     margin:0px;
+     padding:0;
+}
+
+.forgotten{
+  color: #0000ff;
+  font-size:13px;
+}
+.forgotten:hover
+{
+  text-decoration: underline;
+}
+.page_title
+{
+  color:#cc6011;
+  font-size:18px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.cms_label
+{
+  color: #cc6011;
+  font-weight: bold;
+  font-size:13px;
+  text-decoration: underline;
+  margin-right: 50px;
+}
+#name,#password,#confirm_password,#e-mail,#phone
+{
+  width: 431px;
+  height: 31px;
+}
+
+#footer_nav
+{
+  align-content: center;
+	color:#fff;
+	background:#cc6011;
+	width :100%;
+}
+.text-warning{
+  color: #ff0000;
+  font-size:13px;
+}
+.cms_radio_label
+{
+  color: #cc6011;
+  font-size:13px;
+  margin:50px auto;
+}*/
+
+
+/******* the home page **************//
+.flex-container-HaarlemIndex .article1
+{
+	 min-width:23% ;
+     width:23% ;
+     padding-bottom:0px;
+     margin-bottom:10px;
+     max-height:32%;
+	 border-width:2px;
+	 border-style:solid;
+     border-color:#cc6611;
+}
+.flex-container-HaarlemIndex .article1 img
+{
+	  max-width:99% ;
+     width:99% ;
+     margin-bottom:4px;
+     margin-top:4px;
+     height:20%;
+     background-size: contain;
+     background-position: 100% 100%;
+     background-repeat: no-repeat;
+}
+ .flex-container-HaarlemIndex .article1 input {
+     max-width:50% ;
+     width:50% ;
+	 color :#fff;
+	 background-color:#cc6011;
+	 padding: 12px 12px;
+	 margin-top: 50px;
+	 margin-bottom:0px;
+	 margin-left:20% ;
+
+}
+ .flex-container-HaarlemIndex .article1 input:hover {
+	 color :#cc6011;
+	 background-color: #fff;
+	 border:solid 2px #cc6011;
+
+}
+/***************haarlem food**************/
+ .flex-container-HaarlemFood ,.flex-container-HaarlemIndex ,.flex-container-reservation{
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -ms-flex-wrap: wrap;
+     flex-wrap: wrap;
+     -webkit-box-pack: justify;
+     -ms-flex-pack: justify;
+     justify-content: space-between;
+     -ms-flex-pack: distribute;
+     justify-content: space-around;
+     padding-top :0.5%;
+     padding-right :0.5%;
+     min-width:100% ;
+     width:100% ;
+}
+ .flex-container-HaarlemFood .article1{
+     min-width:32% ;
+     width:32% ;
+     padding-bottom:0px;
+     margin-bottom:10px;
+     max-height:32%;
+	 border-width:2px;
+	 border-style:solid;
+     border-color:#cc6611;
+}
+ .flex-container-HaarlemFood .article1 img {
+     max-width:99% ;
+     width:99% ;
+     margin-bottom:4px;
+     margin-top:4px;
+     height:40%;
+     background-size: contain;
+     background-position: 100% 100%;
+     background-repeat: no-repeat;
+}
+ .flex-container-HaarlemFood .article1 input {
+     max-width:50% ;
+     width:50% ;
+	 color :#fff;
+	 background-color:#cc6011;
+	 padding: 12px 12px;
+	 margin-top: 50px;
+	 margin-left:20% ;
+
+}
+ .flex-container-HaarlemFood .article1 h3 {
+	 color :#cc6011;
+	 text-align:center;
+}
+ .flex-container-HaarlemFood .article1 p {
+	 text-align:left;
+	 padding-left :5px;
+}
+ .flex-container-HaarlemFood .article1 input:hover {
+	 color :#cc6011;
+	 background-color: #fff;
+	 border:solid 2px #cc6011;
+
+}
+.searchClass{
+	padding :20px;
+}
+.flex-container-reservation input[type="submit"]
+{
+     max-width:70% ;
+     width:70% ;
+	 color :#fff;
+	 background-color:#cc6011;
+	 padding: 12px 12px;
+	 margin-top: 50px;
+	 margin-left:20% ;
+}*/
+
+
+/********************Footer**************************/
+footer {
+
+	padding: 1em;
+	text-align: center;
+	color:#fff;
+	background:#cc6011;
+	width :100%;
+}
+/********************Jazz_BuyTickets**************************/
+
+table {
+margin-bottom: 7px;
+}
+th, td {
+padding: 0.1%;
+}
+.centerTitle,.centerPrice,.centerDespription{
+text-align: center;
+font-size: 17px;
+
+}
+.centerTitle{
+font-weight: bold;
+font-size: 19px;
+
+}
+
+.button1,.multiple_event_btn {
+padding: 5px 22px;
+background-color: #4CAF50;
+color: white;
+font-size: 14px;
+border-radius: 7px;
+font-weight: bold;
+border-color: #4CAF50;
+}
+.button2{
+  padding: 5px 22px;
+  background-color: #c23627;
+  color: white;
+  font-size: 14px;
+  border-radius: 7px;
+  font-weight: bold;
+  border-color: #4CAF50;
+}
+.multiple_event_btn{
+width: 180px;
+font-size: 20px
+}
+.quantity{
+font-size: 14px;
+text-align: center;
+}
+
+.seats_label{
+font-weight: bold;
+font-size: 16px;
+}
+.aside {
+float:  right;
+border: 2px solid;
+margin: 8px;
+width: 27%;
+border-color: #B45F0A;
+}
+.timetablerow{
+text-indent: 15%;
+*line-height: 50%;*/
+}
+
+.section{
+border: 1px solid;
+border-color: #B45F0A;
+width: 71.5%;
+border-radius: 12px;
+background-image: url(../Img/jazz1.jpg);
+background-repeat: no-repeat; repeat;
+background-size: 100% 100%;
+background-position: center;
+
+}
+.ticketForm{
+	margin: 6px;
+	margin-top: 0px;
+
+}
+.eventHeading,.otherEventsHeading{
+background-color: #B45F0A;
+padding: 20px;
+margin-left: 5px;
+margin-right: 5px;
+margin-bottom: 0px;
+text-align: center;
+color: #fff;
+opacity: 0.8;
+}
+
+
+.date{
+line-height: 50%;
+margin-bottom: 3%;
+margin-left: 25px;
+}
+.ttable{
+text-align: center;
+font-size: 29px;
+}
+.cheapTicketsh2{
+background-color: #5D1C5C;
+padding: 20px;
+margin-left: 5px;
+margin-right: 5px;
+margin-top: 5px;
+margin-bottom: 0px;
+text-align: center;
+color: white;
+}
+.otherEvents{
+ display: block;
+width: 70%;
+margin-top: 15px;
+height: 476px;
+}
+
+.timetablerow{
+	text-indent: 15%;
+	line-height: 50%;
+}
+
+.column{
+border: 1px solid;
+border-color: #B45F0A;
+height: 250px;
+width: 330px;
+position: relative;
+text-align: center;
+}
+.otherEventstable{
+  display: block;
+border-spacing: 30px 0px;
+margin: auto;
+margin-bottom: 50px;
+}
+.otherEventsCaption{
+font-size: 30px;
+font-weight: bold;
+padding: 20px;
+}
+.otherEventsHeading{
+font-size: 170%;
+
+}
+.findoutmore{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 150px;
+color: #FFFF;
+background-color: #B0691F;
+font-size: 20px;
+padding: 6px;
+border-radius: 6px;
+border-color: #B45F0A;
+
+
+}
+/******************Jazz_UI*******************/
+
+.form{
+  border: 2px solid;
+  border-color: #A99678;
+  background-image: url(../Img/jazz1.jpg);
+  background-repeat: no-repeat; repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.buyticketbtn{
+	display: block;
+	margin: auto;
+	background-color: #B25900;
+  border-color:  #B25900;
+	color: white;
+	cursor: pointer;
+	font-size: 18px;
+	width: 200px;
+	height: 40px;
+	border-radius: 5px;
+}
+.timetableHeading{
+	height: 100px;
+	margin-right: 40px;
+	background-color: #D8D8D8;
+	opacity:0.6;
+	font-size: 30px;
+
+}
+.timetable{
+	border-spacing: 30px 0px;
+	table-layout: fixed;
+ margin: auto;
+ margin-bottom: 50px;
+}
+a{
+  text-decoration: none;
+}
+.selectDayJazzEvent li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 10px ;
+    text-decoration: none;
+
+  }
+
+  .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+      width: 300px;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {background-color: #ddd;}
+
+  .dropdown:hover .dropdown-content {display: block;}
+
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+
+/*.artist{
+	text-indent: 15%;
+	line-height: 50%;
+}
+*/.artist{
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 50%;
+			}
+      .tdticket{
+        background-color: #FFFFFF;
+
+      }
+    .headingJazz{
+       text-align: center;
+    }

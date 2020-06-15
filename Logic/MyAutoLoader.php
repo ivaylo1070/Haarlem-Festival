@@ -4,7 +4,7 @@ spl_autoload_register('autoload');
 function autoload($className)
 {
 //list comma separated directory name
-$directory = array('UI/','Model/JazzModels/','Controller/','Config/','Logic/','DAL/');
+$directory = array('UI/','Model/JazzModels/','Controller/','Config/','Model/','DAL/');
 
 //list of comma separated file format
 $fileFormat = array('%s.php', '%s.class.php');

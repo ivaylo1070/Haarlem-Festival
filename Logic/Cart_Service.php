@@ -5,9 +5,6 @@ $jazz_dal= new Jazz_dal();
 $reservation_dal= new Reservation_dal();
 */
 
-require_once("../Model/Ticket.php");
-require_once("../DAL/cart_dal.php");
-
 class Cart_Service{
 
   public function saveCart($cart){
@@ -38,7 +35,7 @@ class Cart_Service{
   public function AddToCart($ticket){
     if($ticket->quantity > 0){
       if(!empty($_SESSION["cart"][$ticket->ticketID])){
-        $_SESSION["cart"][$ticket->ticketID]->quantity = $ticket->quantity;
+        //$_SESSION["cart"][$ticket->ticketID]->quantity = $ticket->quantity;
         //update cart ticket quantity if it already exists.
       }
       else{

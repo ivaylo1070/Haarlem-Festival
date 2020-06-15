@@ -116,20 +116,7 @@ li a:hover {
 }
 /***************haarlem food*************/
  .flex-container-HaarlemFood ,.flex-container-HaarlemIndex ,.flex-container-reservation{
-     display: -webkit-box;
-     display: -ms-flexbox;
-     display: flex;
-     -ms-flex-wrap: wrap;
-     flex-wrap: wrap;
-     -webkit-box-pack: justify;
-     -ms-flex-pack: justify;
-     justify-content: space-between;
-     -ms-flex-pack: distribute;
-     justify-content: space-around;
-     padding-top :0.5%;
-     padding-right :0.5%;
-     min-width:100% ;
-     width:100% ;
+   
 }
  .flex-container-HaarlemFood .article1{
      min-width:32% ;
@@ -142,13 +129,13 @@ li a:hover {
      border-color:#cc6611;
 }
  .flex-container-HaarlemFood .article1 img {
-     max-width:99% ;
-     width:99% ;
+     max-width:70% ;
+     width:70% ;
      margin-bottom:4px;
      margin-top:4px;
      height:40%;
      background-size: contain;
-     background-position: 100% 100%;
+     background-position: 70% 70%;
      background-repeat: no-repeat;
 }
  .flex-container-HaarlemFood .article1 input {

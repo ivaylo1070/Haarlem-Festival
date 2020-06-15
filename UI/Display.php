@@ -1,6 +1,6 @@
 <?php
 //https://www.youtube.com/watch?v=eAK8uYtNTy4  for the styling
-//https://www.youtube.com/watch?reload=9&v=Ipa9xAs_nTg  for the image 
+//https://www.youtube.com/watch?reload=9&v=Ipa9xAs_nTg  for the image
 
 
  echo "<link rel='stylesheet' type='text/css' href='css/Style_resto.css' />";
@@ -8,7 +8,7 @@
 	{
 
 		$info ="<form action=\"\" method =\"POST\" class=\"card\">
-					 <img src=\"./upload/$image\" \>
+					 <img src=\"..//Img/$image\" \>
 					  <h1>".$id."</h1>
 					   <h1>".$price."</h1>
 					  <h1>".$name."</h1>

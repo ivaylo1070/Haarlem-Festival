@@ -9,9 +9,9 @@ class Jazz_DAO{
 // get all jazz tickets;
 	public function Get_All_Jazz_Tickets(){
 		$sql = "SELECT *
-						FROM ticket
-						JOIN venue ON venue.venue=ticket.venue
-						JOIN artist ON artist.name=ticket.artist";
+						FROM Jazz_Ticket
+						JOIN Venue ON Venue.venue=Jazz_Ticket.venue
+						JOIN artist ON artist.name=Jazz_Ticket.artist";
 
 						$results = $this->conn->query($sql);
 						$numRows = $results->num_rows;
